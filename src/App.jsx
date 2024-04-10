@@ -19,6 +19,7 @@ function App() {
     } else {
       setDataIndex(dataIndex + 1);
     }
+    setSelectedVerbIndex(-1);
   }
 
   function goHandleClick() {
@@ -60,12 +61,12 @@ function App() {
           GO
         </button>
         {selectedVerbIndex !== -1 && (
-          <p className="text-xl my-8">
+          <p className="text-xl my-8 text-yellow-300">
             {currentList[selectedVerbIndex].french_translation}
           </p>
         )}
       </div>
-      {switchCorrection === 2 && (
+      {selectedVerbIndex !== -1 && switchCorrection === 2 && (
         <div className="flex flex-col MY-8">
           <p className="text-xl">{currentList[selectedVerbIndex].base_form}</p>
           <p className="text-xl">{currentList[selectedVerbIndex].past_tense}</p>
