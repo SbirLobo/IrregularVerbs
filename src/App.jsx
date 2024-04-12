@@ -4,6 +4,10 @@ import verb176 from "./data/verb176";
 import verb90 from "./data/verb90";
 import verb60 from "./data/verb60";
 import verb30 from "./data/verb30";
+import ListButton from "./components/ListButton";
+import GoButton from "./components/GoButton";
+import VerbTranslation from "./components/VerbTranslation";
+import VerbCorrection from "./components/VerbCorrection";
 
 function App() {
   // data : all verbs
@@ -19,46 +23,6 @@ function App() {
   // current verb : object
   const [currentVerb, setCurrentVerb] = useState({});
 
-  function newVerbSelection() {
-    const tempsSelectedVerbIndex = Math.floor(
-      Math.random() * currentList.length
-    );
-    const tempCurrentList = currentList;
-    // const tempCurrentVerb = tempCurrentList.splice(tempsSelectedVerbIndex, 1);
-    const tempCurrentVerb = tempCurrentList[tempsSelectedVerbIndex];
-    const NewCurrentList = tempCurrentList.filter(
-      (i) => i.base_form !== tempCurrentVerb.base_form
-    );
-    setCurrentVerb(tempCurrentVerb[0]);
-    setCurrentVerb(tempCurrentVerb);
-    setCurrentList(NewCurrentList);
-    setSelectedVerbIndex(tempsSelectedVerbIndex);
-  }
-
-  function listHandleClick() {
-    if (dataIndex === data.length - 1) {
-      setDataIndex(0);
-    } else {
-      setDataIndex(dataIndex + 1);
-    }
-    setSelectedVerbIndex(-1);
-    setCurrentList(data[dataIndex]);
-    setCorrectionDisplay(0);
-    setData([verb30, verb60, verb90, verb176]);
-  }
-
-  function goHandleClick() {
-    if (correctionDisplay === 0) {
-      newVerbSelection();
-    }
-    if (correctionDisplay === 2) {
-      setCorrectionDisplay(1);
-      newVerbSelection();
-    } else {
-      setCorrectionDisplay(correctionDisplay + 1);
-    }
-  }
-
   useEffect(() => {
     setCurrentList(data[dataIndex]);
     setCorrectionDisplay(0);
@@ -68,41 +32,39 @@ function App() {
     <>
       <div className="flex flex-col"></div>
       <h1 className="text-3xl font-bold p-4">Irregular Verbs</h1>
-      <div className="flex flex-row justify-around">
-        {currentList.length === 176 ? (
-          <button onClick={listHandleClick} className="text-xl my-8 w-72">
-            All of the {currentList.length} verbs
-          </button>
-        ) : (
-          <button onClick={listHandleClick} className="text-xl my-8 w-72">
-            {currentList.length} most common verbs
-          </button>
-        )}
-      </div>
+      <ListButton
+        currentList={currentList}
+        dataIndex={dataIndex}
+        data={data}
+        setDataIndex={setDataIndex}
+        setSelectedVerbIndex={setSelectedVerbIndex}
+        setCurrentList={setCurrentList}
+        setCorrectionDisplay={setCorrectionDisplay}
+        setData={setData}
+        verb30={verb30}
+        verb60={verb60}
+        verb90={verb90}
+        verb176={verb176}
+      />
       <div className="flex flex-col">
-        {currentList.length === 0 && correctionDisplay === 2 ? (
-          <button className="text-xl my-8 text-pink-600 font-bold">
-            GOOD GAME
-          </button>
-        ) : (
-          <button onClick={goHandleClick} className="text-xl my-8">
-            GO
-          </button>
-        )}
-
-        {selectedVerbIndex !== -1 && (
-          <p className="text-xl my-8 text-yellow-300">
-            {currentVerb.french_translation}
-          </p>
-        )}
+        <GoButton
+          correctionDisplay={correctionDisplay}
+          setCorrectionDisplay={setCorrectionDisplay}
+          currentList={currentList}
+          setCurrentVerb={setCurrentVerb}
+          setCurrentList={setCurrentList}
+          setSelectedVerbIndex={setSelectedVerbIndex}
+        />
+        <VerbTranslation
+          selectedVerbIndex={selectedVerbIndex}
+          currentVerb={currentVerb}
+        />
       </div>
-      {selectedVerbIndex !== -1 && correctionDisplay === 2 && (
-        <div className="flex flex-col MY-8">
-          <p className="text-xl">{currentVerb.base_form}</p>
-          <p className="text-xl">{currentVerb.past_tense}</p>
-          <p className="text-xl">{currentVerb.past_participle}</p>
-        </div>
-      )}
+      <VerbCorrection
+        selectedVerbIndex={selectedVerbIndex}
+        correctionDisplay={correctionDisplay}
+        currentVerb={currentVerb}
+      />
     </>
   );
 }
