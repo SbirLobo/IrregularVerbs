@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function ListButton({
   currentList,
   dataIndex,
@@ -7,10 +9,7 @@ export default function ListButton({
   setCurrentList,
   setCorrectionDisplay,
   setData,
-  verb30,
-  verb60,
-  verb90,
-  verb176,
+  verbsByCommon,
 }) {
   function listHandleClick() {
     if (dataIndex === data.length - 1) {
@@ -21,22 +20,33 @@ export default function ListButton({
     setSelectedVerbIndex(-1);
     setCurrentList(data[dataIndex]);
     setCorrectionDisplay(0);
-    setData([verb30, verb60, verb90, verb176]);
+    setData([
+      verbsByCommon.slice(0, 30),
+      verbsByCommon.slice(0, 60),
+      verbsByCommon.slice(0, 90),
+      verbsByCommon,
+    ]);
   }
 
   return (
     <>
       <div className="flex flex-row justify-around">
-        {currentList.length === 176 ? (
-          <button onClick={listHandleClick} className="text-xl my-8 w-72">
-            All of the {currentList.length} verbs
-          </button>
-        ) : (
-          <button onClick={listHandleClick} className="text-xl my-8 w-72">
-            {currentList.length} most common verbs
-          </button>
-        )}
+        <button onClick={listHandleClick} className="text-xl my-8 w-72">
+          {currentList.length} most common verbs
+        </button>
       </div>
     </>
   );
 }
+
+ListButton.propTypes = {
+  currentList: PropTypes.arrayOf(PropTypes.object),
+  dataIndex: PropTypes.number,
+  data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object)),
+  setDataIndex: PropTypes.func,
+  setSelectedVerbIndex: PropTypes.func,
+  setCurrentList: PropTypes.func,
+  setCorrectionDisplay: PropTypes.func,
+  setData: PropTypes.func,
+  verbsByCommon: PropTypes.arrayOf(PropTypes.object),
+};

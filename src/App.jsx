@@ -1,9 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import verb176 from "./data/verb176";
-import verb90 from "./data/verb90";
-import verb60 from "./data/verb60";
-import verb30 from "./data/verb30";
+import verbsByCommon from "./data/verbsByCommon";
 import ListButton from "./components/ListButton";
 import GoButton from "./components/GoButton";
 import VerbTranslation from "./components/VerbTranslation";
@@ -11,7 +8,12 @@ import VerbCorrection from "./components/VerbCorrection";
 
 function App() {
   // data : all verbs
-  const [data, setData] = useState([verb30, verb60, verb90, verb176]);
+  const [data, setData] = useState([
+    verbsByCommon.slice(0, 30),
+    verbsByCommon.slice(0, 60),
+    verbsByCommon.slice(0, 90),
+    verbsByCommon,
+  ]);
   // correctionDisplay (0: start, 1: translation, 2: correction) = display of the correction
   const [correctionDisplay, setCorrectionDisplay] = useState(0);
   //selectedVerbIndex = index of the verb chosen by chance
@@ -41,10 +43,7 @@ function App() {
         setCurrentList={setCurrentList}
         setCorrectionDisplay={setCorrectionDisplay}
         setData={setData}
-        verb30={verb30}
-        verb60={verb60}
-        verb90={verb90}
-        verb176={verb176}
+        verbsByCommon={verbsByCommon}
       />
       <div className="flex flex-col">
         <GoButton

@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function VerbCorrection({
   selectedVerbIndex,
   correctionDisplay,
@@ -15,3 +17,9 @@ export default function VerbCorrection({
     </>
   );
 }
+
+VerbCorrection.propTypes = {
+  selectedVerbIndex: PropTypes.number,
+  correctionDisplay: PropTypes.number,
+  currentVerb: PropTypes.object,
+};

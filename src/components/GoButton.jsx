@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export default function GoButton({
   correctionDisplay,
   setCorrectionDisplay,
@@ -13,12 +15,12 @@ export default function GoButton({
     const tempCurrentList = currentList;
 
     const tempCurrentVerb = tempCurrentList[tempsSelectedVerbIndex];
-    const NewCurrentList = tempCurrentList.filter(
+    const newCurrentList = tempCurrentList.filter(
       (i) => i.base_form !== tempCurrentVerb.base_form
     );
 
     setCurrentVerb(tempCurrentVerb);
-    setCurrentList(NewCurrentList);
+    setCurrentList(newCurrentList);
     setSelectedVerbIndex(tempsSelectedVerbIndex);
   }
 
@@ -48,3 +50,12 @@ export default function GoButton({
     </>
   );
 }
+
+GoButton.propTypes = {
+  correctionDisplay: PropTypes.number,
+  setCorrectionDisplay: PropTypes.func,
+  currentList: PropTypes.arrayOf(PropTypes.object),
+  setCurrentVerb: PropTypes.func,
+  setCurrentList: PropTypes.func,
+  setSelectedVerbIndex: PropTypes.func,
+};
