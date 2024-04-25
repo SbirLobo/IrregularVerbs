@@ -24,6 +24,8 @@ function App() {
   const [currentList, setCurrentList] = useState(data[0]);
   // current verb : object
   const [currentVerb, setCurrentVerb] = useState({});
+  // sound ON/OFF
+  const [audioClick, setAudioClick] = useState(false);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
@@ -53,6 +55,7 @@ function App() {
           setCurrentVerb={setCurrentVerb}
           setCurrentList={setCurrentList}
           setSelectedVerbIndex={setSelectedVerbIndex}
+          setAudioClick={setAudioClick}
         />
         <VerbTranslation
           selectedVerbIndex={selectedVerbIndex}
@@ -63,6 +66,8 @@ function App() {
         selectedVerbIndex={selectedVerbIndex}
         correctionDisplay={correctionDisplay}
         currentVerb={currentVerb}
+        audioClick={audioClick}
+        setAudioClick={setAudioClick}
       />
     </>
   );

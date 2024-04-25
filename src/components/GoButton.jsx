@@ -7,6 +7,7 @@ export default function GoButton({
   setCurrentVerb,
   setCurrentList,
   setSelectedVerbIndex,
+  setAudioClick,
 }) {
   function newVerbSelection() {
     const tempsSelectedVerbIndex = Math.floor(
@@ -22,6 +23,7 @@ export default function GoButton({
     setCurrentVerb(tempCurrentVerb);
     setCurrentList(newCurrentList);
     setSelectedVerbIndex(tempsSelectedVerbIndex);
+    setAudioClick(false);
   }
 
   function goHandleClick() {
@@ -58,4 +60,5 @@ GoButton.propTypes = {
   setCurrentVerb: PropTypes.func,
   setCurrentList: PropTypes.func,
   setSelectedVerbIndex: PropTypes.func,
+  setAudioClick: PropTypes.func,
 };
