@@ -1,13 +1,7 @@
 const verbsByCommon = [
   {
-    base_form: "",
-    past_simple: "",
-    past_participle: "",
-    french: "",
-  },
-  {
     base_form: "to be",
-    past_simple: "was / were",
+    past_simple: "was, were",
     past_participle: "been",
     french: "être",
   },
@@ -38,7 +32,7 @@ const verbsByCommon = [
   {
     base_form: "to get",
     past_simple: "got",
-    past_participle: "got / gotten",
+    past_participle: "got, gotten",
     french: "obtenir",
   },
   {
@@ -183,7 +177,7 @@ const verbsByCommon = [
     base_form: "to sit",
     past_simple: "sat",
     past_participle: "sat",
-    french: "#REF!",
+    french: "s'assoir",
   },
   {
     base_form: "to stand",
@@ -217,8 +211,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to learn",
-    past_simple: "learnt / learned",
-    past_participle: "learnt / learned",
+    past_simple: "learnt, learned",
+    past_participle: "learnt, learned",
     french: "apprendre",
   },
   {
@@ -327,7 +321,7 @@ const verbsByCommon = [
     base_form: "to hit",
     past_simple: "hit",
     past_participle: "hit",
-    french: "#REF!",
+    french: "frapper",
   },
   {
     base_form: "to eat",
@@ -416,13 +410,13 @@ const verbsByCommon = [
   {
     base_form: "to prove",
     past_simple: "proved",
-    past_participle: "proven / proved",
+    past_participle: "proven, proved",
     french: "prouver",
   },
   {
     base_form: "to hang",
-    past_simple: "hung / hanged",
-    past_participle: "hung / hanged",
+    past_simple: "hung, hanged",
+    past_participle: "hung, hanged",
     french: "tenir, pendre",
   },
   {
@@ -451,8 +445,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to dream",
-    past_simple: "dreamt / dreamed",
-    past_participle: "dreamt / dreamed",
+    past_simple: "dreamt, dreamed",
+    past_participle: "dreamt, dreamed",
     french: "rêver",
   },
   {
@@ -482,7 +476,7 @@ const verbsByCommon = [
   {
     base_form: "to strike",
     past_simple: "struck",
-    past_participle: "struck / stricken",
+    past_participle: "struck, stricken",
     french: "frapper",
   },
   {
@@ -523,8 +517,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to fit",
-    past_simple: "fit / fitted",
-    past_participle: "fit / fitted",
+    past_simple: "fit, fitted",
+    past_participle: "fit, fitted",
     french: "s'adapter, ajuster, aller (vêtement)",
   },
   {
@@ -535,8 +529,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to speed",
-    past_simple: "sped / speeded",
-    past_participle: "sped / speeded",
+    past_simple: "sped, speeded",
+    past_participle: "sped, speeded",
     french: "aller vite",
   },
   {
@@ -547,14 +541,14 @@ const verbsByCommon = [
   },
   {
     base_form: "to burn",
-    past_simple: "burnt / burned",
-    past_participle: "burnt / burned",
+    past_simple: "burnt, burned",
+    past_participle: "burnt, burned",
     french: "brûler",
   },
   {
     base_form: "to lean",
-    past_simple: "leant / leaned",
-    past_participle: "leant / leaned",
+    past_simple: "leant, leaned",
+    past_participle: "leant, leaned",
     french: "s'incliner, se pencher",
   },
   {
@@ -566,7 +560,7 @@ const verbsByCommon = [
   {
     base_form: "to bear",
     past_simple: "bore",
-    past_participle: "born / borne",
+    past_participle: "born, borne",
     french: "porter, supporter, naître",
   },
   {
@@ -602,7 +596,7 @@ const verbsByCommon = [
   {
     base_form: "to slide",
     past_simple: "slid",
-    past_participle: "slid / slidden",
+    past_participle: "slid, slidden",
     french: "glisser",
   },
   {
@@ -613,8 +607,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to smell",
-    past_simple: "smelt / smelled",
-    past_participle: "smelt / smelled",
+    past_simple: "smelt, smelled",
+    past_participle: "smelt, smelled",
     french: "sentir",
   },
   {
@@ -649,13 +643,13 @@ const verbsByCommon = [
   },
   {
     base_form: "to sweep",
-    past_simple: "swept / sweeped",
-    past_participle: "swept / sweeped",
+    past_simple: "swept, sweeped",
+    past_participle: "swept, sweeped",
     french: "balayer",
   },
   {
     base_form: "to spin",
-    past_simple: "span / spun",
+    past_simple: "span, spun",
     past_participle: "spun",
     french: "tourner, faire tourner",
   },
@@ -667,8 +661,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to strip",
-    past_simple: "stript / stripped",
-    past_participle: "stript / stripped",
+    past_simple: "stript, stripped",
+    past_participle: "stript, stripped",
     french: "dépouiller",
   },
   {
@@ -709,8 +703,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to rid",
-    past_simple: "rid / ridded",
-    past_participle: "rid / ridded",
+    past_simple: "rid, ridded",
+    past_participle: "rid, ridded",
     french: "débarrasser",
   },
   {
@@ -733,7 +727,7 @@ const verbsByCommon = [
   },
   {
     base_form: "to dare",
-    past_simple: "dared / durst",
+    past_simple: "dared, durst",
     past_participle: "dared",
     french: "oser",
   },
@@ -752,7 +746,7 @@ const verbsByCommon = [
   {
     base_form: "to melt",
     past_simple: "melted",
-    past_participle: "molten / melted",
+    past_participle: "molten, melted",
     french: "fondre, se fondre",
   },
   {
@@ -775,20 +769,20 @@ const verbsByCommon = [
   },
   {
     base_form: "to broadcast",
-    past_simple: "broadcast / broadcasted",
-    past_participle: "broadcast / broadcasted",
+    past_simple: "broadcast, broadcasted",
+    past_participle: "broadcast, broadcasted",
     french: "diffuser, émettre",
   },
   {
     base_form: "to leap",
-    past_simple: "leapt / leaped",
-    past_participle: "leapt / leaped",
+    past_simple: "leapt, leaped",
+    past_participle: "leapt, leaped",
     french: "sauter, bondir",
   },
   {
     base_form: "to spill",
-    past_simple: "spilt / spilled",
-    past_participle: "spilt / spilled",
+    past_simple: "spilt, spilled",
+    past_participle: "spilt, spilled",
     french: "renverser",
   },
   {
@@ -799,8 +793,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to spell",
-    past_simple: "spelt / spelled",
-    past_participle: "spelt / spelled",
+    past_simple: "spelt, spelled",
+    past_participle: "spelt, spelled",
     french: "épeler, orthographier",
   },
   {
@@ -817,8 +811,8 @@ const verbsByCommon = [
   },
   {
     base_form: "to sneak",
-    past_simple: "sneaked / snuck",
-    past_participle: "sneaked / snuck",
+    past_simple: "sneaked, snuck",
+    past_participle: "sneaked, snuck",
     french: "se faufiler",
   },
   {
@@ -829,13 +823,13 @@ const verbsByCommon = [
   },
   {
     base_form: "to thrive",
-    past_simple: "throve / thrived",
-    past_participle: "thriven / thrived",
+    past_simple: "throve, thrived",
+    past_participle: "thriven, thrived",
     french: "prospérer",
   },
   {
     base_form: "to forbid",
-    past_simple: "forbade / forbad",
+    past_simple: "forbade, forbad",
     past_participle: "forbidden",
     french: "interdire",
   },
@@ -853,14 +847,14 @@ const verbsByCommon = [
   },
   {
     base_form: "to spit",
-    past_simple: "spat / spit",
-    past_participle: "spat / spit",
+    past_simple: "spat, spit",
+    past_participle: "spat, spit",
     french: "cracher",
   },
   {
     base_form: "to kneel",
-    past_simple: "knelt / kneeled",
-    past_participle: "knelt / kneeled",
+    past_simple: "knelt, kneeled",
+    past_participle: "knelt, kneeled",
     french: "s'agenouiller",
   },
   {
