@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import TextToSpeech from "./test";
+import TextToSpeech from "./TextToSpeech";
 
 export default function VerbCorrection({
   selectedVerbIndex,
