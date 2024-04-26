@@ -5,12 +5,17 @@ export default function TextToSpeech({
   past_simple,
   past_participle,
 }) {
-  const audioHandleClick = () => {
-    const synth = window.speechSynthesis;
-    synth.speak(new SpeechSynthesisUtterance(base_form));
-    synth.speak(new SpeechSynthesisUtterance(past_simple));
-    synth.speak(new SpeechSynthesisUtterance(past_participle));
-  };
+  function audioHandleClick() {
+    const utterance = new SpeechSynthesisUtterance(
+      ` ${base_form}, ${past_simple}, ${past_participle} `
+    );
+    utterance.lang = "en-GB";
+    utterance.lang = "en-US";
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    utterance.rate = 0.9;
+    speechSynthesis.speak(utterance);
+  }
 
   return (
     <div>
