@@ -16,16 +16,26 @@ export default function TextToSpeech({
     utterance.rate = 0.9;
     speechSynthesis.speak(utterance);
   }
+  // detect preference appearance
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
 
   return (
     <div>
-      <img
-        onClick={audioHandleClick}
-        src="https://github.com/SbirLobo/IrregularVerbs/assets/108263661/0c7ccbc7-a60a-41b3-92fb-72f7dac885ce"
-        alt="voice_image"
-        style={{ cursor: "pointer" }}
-        className="w-10 my-8"
-      />
+      {mq.matches ? (
+        <img
+          onClick={audioHandleClick}
+          src="https://github.com/SbirLobo/IrregularVerbs/assets/108263661/0c7ccbc7-a60a-41b3-92fb-72f7dac885ce"
+          alt="voice_image"
+          className="audioIcon"
+        />
+      ) : (
+        <img
+          onClick={audioHandleClick}
+          src="https://github.com/SbirLobo/IrregularVerbs/assets/108263661/35ff1276-3101-41da-9496-8208ce7f83b0"
+          alt="voice_image"
+          className="audioIcon"
+        />
+      )}
     </div>
   );
 }
