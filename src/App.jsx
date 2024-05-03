@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import verbsByCommon from "./data/verbsByCommon";
+import Title from "./components/Title";
 import ListButton from "./components/ListButton";
 import GoButton from "./components/GoButton";
 import VerbTranslation from "./components/VerbTranslation";
@@ -32,20 +33,19 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col"></div>
-      <h1 className="text-3xl font-bold p-4">Irregular Verbs</h1>
-      <ListButton
-        currentList={currentList}
-        dataIndex={dataIndex}
-        data={data}
-        setDataIndex={setDataIndex}
-        setSelectedVerbIndex={setSelectedVerbIndex}
-        setCurrentList={setCurrentList}
-        setCorrectionDisplay={setCorrectionDisplay}
-        setData={setData}
-        verbsByCommon={verbsByCommon}
-      />
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
+        <Title />
+        <ListButton
+          currentList={currentList}
+          dataIndex={dataIndex}
+          data={data}
+          setDataIndex={setDataIndex}
+          setSelectedVerbIndex={setSelectedVerbIndex}
+          setCurrentList={setCurrentList}
+          setCorrectionDisplay={setCorrectionDisplay}
+          setData={setData}
+          verbsByCommon={verbsByCommon}
+        />
         <GoButton
           correctionDisplay={correctionDisplay}
           setCorrectionDisplay={setCorrectionDisplay}
@@ -58,12 +58,12 @@ function App() {
           selectedVerbIndex={selectedVerbIndex}
           currentVerb={currentVerb}
         />
+        <VerbCorrection
+          selectedVerbIndex={selectedVerbIndex}
+          correctionDisplay={correctionDisplay}
+          currentVerb={currentVerb}
+        />
       </div>
-      <VerbCorrection
-        selectedVerbIndex={selectedVerbIndex}
-        correctionDisplay={correctionDisplay}
-        currentVerb={currentVerb}
-      />
     </>
   );
 }

@@ -31,7 +31,7 @@ export default function ListButton({
   return (
     <>
       <div className="flex flex-row justify-around">
-        <button onClick={listHandleClick} className="text-xl my-8 w-72">
+        <button onClick={listHandleClick} className="">
           {currentList.length} most common verbs
         </button>
       </div>
