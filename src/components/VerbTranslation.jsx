@@ -1,10 +1,16 @@
 import PropTypes from "prop-types";
 
-export default function VerbTranslation({ selectedVerbIndex, currentVerb }) {
+export default function VerbTranslation({
+  selectedVerbIndex,
+  currentVerb,
+  currentLang,
+}) {
   return (
     <>
       {selectedVerbIndex !== -1 && (
-        <p className="text-xl my-8 verbTranslation">{currentVerb.french}</p>
+        <p className="text-xl my-8 verbTranslation">
+          {currentVerb[currentLang.language]}
+        </p>
       )}
     </>
   );
@@ -13,4 +19,5 @@ export default function VerbTranslation({ selectedVerbIndex, currentVerb }) {
 VerbTranslation.propTypes = {
   selectedVerbIndex: PropTypes.number,
   currentVerb: PropTypes.object,
+  currentLang: PropTypes.object,
 };

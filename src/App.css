@@ -19,11 +19,90 @@
   filter: drop-shadow(0 0 1rem #e3f0f3aa);
 }
 
+.mainButton {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 18rem;
+}
+.mainButton:hover {
+  border-color: #646cff;
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+.mainButton:focus,
+.mainButton:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+.popupLang {
+  background-color: #333333;
+  width: 80%;
+  max-width: 400px;
+  height: fit-content;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border: solid 4px #7c429e;
+  border-radius: 15px 15px 15px / 15px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  align-content: baseline;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  cursor: default;
+  overflow: auto;
+}
+
+.popupLayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  overflow: auto;
+}
+
+.flag {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  border: solid 4px;
+  border-color: rgb(209 213 219 / 1);
+}
+.flag:hover {
+  cursor: pointer;
+  border-color: rgb(253 224 71 / 1);
+}
+
 @media (prefers-color-scheme: light) {
   .verbTranslation {
     color: darkblue;
   }
   .audioIcon:hover {
     filter: drop-shadow(0 0 1rem #03232baa);
+  }
+  .mainButton {
+    background-color: #b6b6b6;
+  }
+  .popupLang {
+    background-color: #dfdfdf;
   }
 }
