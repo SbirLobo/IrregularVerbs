@@ -2,32 +2,32 @@ const languages = [
   {
     id: "1",
     language: "english",
-    alpha2: "GB",
+    alpha2: "gb",
   },
   {
     id: "2",
     language: "french",
-    alpha2: "FR",
+    alpha2: "fr",
   },
   {
     id: "3",
     language: "german",
-    alpha2: "DE",
+    alpha2: "de",
   },
   {
     id: "4",
     language: "spanish",
-    alpha2: "ES",
+    alpha2: "es",
   },
   {
     id: "5",
     language: "chinese",
-    alpha2: "CN",
+    alpha2: "cn",
   },
   {
     id: "6",
     language: "italian",
-    alpha2: "IT",
+    alpha2: "it",
   },
 ];
 
