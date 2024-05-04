@@ -39,11 +39,9 @@ export default function GoButton({
   return (
     <>
       {currentList.length === 0 && correctionDisplay === 2 ? (
-        <button className="text-xl my-8 text-pink-600 font-bold">
-          GOOD GAME
-        </button>
+        <button className="text-pink-600 font-bold">GOOD GAME</button>
       ) : (
-        <button onClick={goHandleClick} className="text-xl my-8">
+        <button onClick={goHandleClick} className="mainButton">
           GO
         </button>
       )}
