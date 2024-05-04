@@ -51,8 +51,6 @@ function App() {
     ]);
   }
 
-  console.log(currentLang);
-
   return (
     <>
       <div className="flex flex-col items-center">

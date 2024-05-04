@@ -17,7 +17,7 @@ export default function FlagCard({
       <img
         key={lang.id}
         className="flag"
-        src={`../public/flags_svg_alpha2/${lang.alpha2}.svg`}
+        src={`/flags_svg_alpha2/${lang.alpha2}.svg`}
         alt={`${lang.language} flag`}
         onClick={test}
       />
