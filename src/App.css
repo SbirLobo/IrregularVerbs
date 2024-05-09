@@ -3,10 +3,22 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  --text-dark-theme-translation: #ffff00;
+  --text-white-theme-translation: #00008b;
+  --shadow-dark-theme-audioIcon: #e3f0f3aa;
+  --shadow-white-theme-audioIcon: #03232baa;
+  --bg-dark-theme-mainButton: #1a1a1a;
+  --bg-white-theme-mainButton: #b6b6b6;
+  --bg-dark-theme-popupDefault: #333333;
+  --bg-white-theme-popupDefault: #dfdfdf;
 }
 
 .verbTranslation {
-  color: yellow;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  color: var(--text-dark-theme-translation);
 }
 
 .audioIcon {
@@ -16,7 +28,7 @@
   width: 2.5rem;
 }
 .audioIcon:hover {
-  filter: drop-shadow(0 0 1rem #e3f0f3aa);
+  filter: drop-shadow(0 0 1rem var(--shadow-dark-theme-audioIcon));
 }
 
 .mainButton {
@@ -26,7 +38,7 @@
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--bg-dark-theme-mainButton);
   cursor: pointer;
   transition: border-color 0.25s;
   font-size: 1.25rem;
@@ -43,8 +55,9 @@
 .mainButton:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-.popupLang {
-  background-color: #333333;
+
+.popupDefault {
+  background-color: var(--bg-dark-theme-popupDefault);
   width: 80%;
   max-width: 400px;
   height: fit-content;
@@ -52,17 +65,24 @@
   top: 110px;
   left: 50%;
   transform: translate(-50%, 0);
-  border: solid 4px #7c429e;
   border-radius: 15px 15px 15px / 15px 15px;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  cursor: default;
+  overflow: auto;
+}
+
+.popupLang {
+  border: solid 4px #7c429e;
   display: flex;
   flex-wrap: wrap;
   gap: 2.5rem;
   justify-content: center;
   align-content: baseline;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  cursor: default;
-  overflow: auto;
+}
+
+.popupMenu {
+  border: solid 4px #549e42;
 }
 
 .popupLayout {
@@ -94,15 +114,15 @@
 
 @media (prefers-color-scheme: light) {
   .verbTranslation {
-    color: darkblue;
+    color: var(--text-white-theme-translation);
   }
   .audioIcon:hover {
-    filter: drop-shadow(0 0 1rem #03232baa);
+    filter: drop-shadow(0 0 1rem var(--shadow-white-theme-audioIcon));
   }
   .mainButton {
-    background-color: #b6b6b6;
+    background-color: var(--bg-white-theme-mainButton);
   }
-  .popupLang {
-    background-color: #dfdfdf;
+  .popupDefault {
+    background-color: var(--bg-white-theme-popupDefault);
   }
 }

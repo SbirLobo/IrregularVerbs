@@ -8,6 +8,8 @@ import VerbTranslation from "./components/VerbTranslation";
 import VerbCorrection from "./components/VerbCorrection";
 import languages from "./data/languages";
 import PopupLang from "./components/PopupLang";
+import PopupMenu from "./components/popupMenu";
+import UpdateStyles from "./components/UpdateStyle";
 
 function App() {
   // data : all verbs
@@ -33,6 +35,11 @@ function App() {
   const [currentLang, setCurrentLang] = useState(dataLang[0]);
   // language popup interruptor : bool
   const [popupLang, setPopupLang] = useState(false);
+  // menu popup interruptor : bool
+  const [popupMenu, setPopupMenu] = useState(false);
+  // darkMode interruptor : bool (initialized with prefers-color-scheme)
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const [whiteMode, setWhiteMode] = useState(mq.matches ? false : true);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
@@ -51,17 +58,18 @@ function App() {
     ]);
   }
 
+  useEffect(() => {
+    UpdateStyles(whiteMode);
+  }, [whiteMode]);
+
   return (
     <>
       <div className="flex flex-col items-center">
         <Title
-          dataLang={dataLang}
           currentLang={currentLang}
-          setCurrentLang={setCurrentLang}
-          popupLang={popupLang}
           setPopupLang={setPopupLang}
+          setPopupMenu={setPopupMenu}
         />
-
         <ListButton
           currentList={currentList}
           dataIndex={dataIndex}
@@ -86,6 +94,7 @@ function App() {
           selectedVerbIndex={selectedVerbIndex}
           correctionDisplay={correctionDisplay}
           currentVerb={currentVerb}
+          whiteMode={whiteMode}
         />
       </div>
       <PopupLang
@@ -94,6 +103,12 @@ function App() {
         dataLang={dataLang}
         setCurrentLang={setCurrentLang}
         reset={reset}
+      />
+      <PopupMenu
+        popupMenu={popupMenu}
+        setPopupMenu={setPopupMenu}
+        whiteMode={whiteMode}
+        setWhiteMode={setWhiteMode}
       />
     </>
   );

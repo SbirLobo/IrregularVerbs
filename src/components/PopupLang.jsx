@@ -18,6 +18,7 @@ export default function PopupLang({
       setPopupLang(false);
     }
   }
+
   return (
     <>
       {popupLang && (
@@ -28,7 +29,7 @@ export default function PopupLang({
           className="popupLayout"
           onClick={handleParentClick}
         >
-          <div className="popupLang">
+          <div className="popupDefault popupLang">
             {dataLang.map((lang) => (
               <FlagCard
                 key={lang.id}

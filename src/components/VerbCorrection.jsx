@@ -5,6 +5,7 @@ export default function VerbCorrection({
   selectedVerbIndex,
   correctionDisplay,
   currentVerb,
+  whiteMode,
 }) {
   return (
     <>
@@ -18,6 +19,7 @@ export default function VerbCorrection({
             base_form={currentVerb.base_form}
             past_simple={currentVerb.past_simple}
             past_participle={currentVerb.past_participle}
+            whiteMode={whiteMode}
           />
         </div>
       )}
@@ -31,4 +33,5 @@ VerbCorrection.propTypes = {
   currentVerb: PropTypes.object,
   audioClick: PropTypes.bool,
   setAudioClick: PropTypes.func,
+  whiteMode: PropTypes.bool,
 };
