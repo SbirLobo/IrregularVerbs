@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import PopupAbout from "./PopupAbout";
 import PopupLang from "./PopupLang";
 import PopupMenu from "./PopupMenu";
+import PopupContact from "./PopupContact";
 
 export default function PopupParent({
   popupLang,
@@ -15,12 +16,15 @@ export default function PopupParent({
   setWhiteMode,
   setPopupAbout,
   popupAbout,
+  popupContact,
+  setPopupContact,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
       setPopupLang(false);
       setPopupAbout(false);
       setPopupMenu(false);
+      setPopupContact(false);
     }
   }
   function handleParentClick(e) {
@@ -28,12 +32,13 @@ export default function PopupParent({
       setPopupAbout(false);
       setPopupLang(false);
       setPopupMenu(false);
+      setPopupContact(false);
     }
   }
 
   return (
     <>
-      {(popupAbout || popupLang || popupMenu) && (
+      {(popupAbout || popupLang || popupMenu || popupContact) && (
         <div
           role="button"
           tabIndex={0}
@@ -56,9 +61,11 @@ export default function PopupParent({
               whiteMode={whiteMode}
               setWhiteMode={setWhiteMode}
               setPopupAbout={setPopupAbout}
+              setPopupContact={setPopupContact}
             />
           )}
           {popupAbout && <PopupAbout whiteMode={whiteMode} />}
+          {popupContact && <PopupContact whiteMode={whiteMode} />}
         </div>
       )}
     </>
@@ -77,4 +84,6 @@ PopupParent.propTypes = {
   setWhiteMode: PropTypes.func,
   setPopupAbout: PropTypes.func,
   popupAbout: PropTypes.bool,
+  popupContact: PropTypes.bool,
+  setPopupContact: PropTypes.func,
 };

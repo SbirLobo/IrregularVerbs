@@ -5,6 +5,7 @@ export default function PopupMenu({
   whiteMode,
   setWhiteMode,
   setPopupAbout,
+  setPopupContact,
 }) {
   function handleClickAppearence() {
     setWhiteMode(!whiteMode);
@@ -13,6 +14,11 @@ export default function PopupMenu({
   function handleClickAbout() {
     setPopupMenu(false);
     setPopupAbout(true);
+  }
+
+  function handleClickContact() {
+    setPopupMenu(false);
+    setPopupContact(true);
   }
 
   return (
@@ -40,6 +46,9 @@ export default function PopupMenu({
         <button className="menuButton text-white" onClick={handleClickAbout}>
           About
         </button>
+        <button className="menuButton text-white" onClick={handleClickContact}>
+          Contact
+        </button>
       </div>
     </>
   );
@@ -50,4 +59,5 @@ PopupMenu.propTypes = {
   whiteMode: PropTypes.bool,
   setWhiteMode: PropTypes.func,
   setPopupAbout: PropTypes.func,
+  setPopupContact: PropTypes.func,
 };
