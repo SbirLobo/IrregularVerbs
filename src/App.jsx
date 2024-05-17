@@ -7,9 +7,7 @@ import GoButton from "./components/GoButton";
 import VerbTranslation from "./components/VerbTranslation";
 import VerbCorrection from "./components/VerbCorrection";
 import languages from "./data/languages";
-import PopupLang from "./components/PopupLang";
-import PopupMenu from "./components/PopupMenu";
-import PopupAbout from "./components/PopupAbout";
+import PopupParent from "./components/PopupParent";
 import UpdateStyles from "./components/UpdateStyle";
 
 function App() {
@@ -100,25 +98,18 @@ function App() {
           whiteMode={whiteMode}
         />
       </div>
-      <PopupLang
+      <PopupParent
         popupLang={popupLang}
         setPopupLang={setPopupLang}
         dataLang={dataLang}
         setCurrentLang={setCurrentLang}
         reset={reset}
         whiteMode={whiteMode}
-      />
-      <PopupMenu
         popupMenu={popupMenu}
         setPopupMenu={setPopupMenu}
-        whiteMode={whiteMode}
         setWhiteMode={setWhiteMode}
         setPopupAbout={setPopupAbout}
-      />
-      <PopupAbout
         popupAbout={popupAbout}
-        setPopupAbout={setPopupAbout}
-        whiteMode={whiteMode}
       />
     </>
   );

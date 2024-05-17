@@ -7,7 +7,6 @@ export default function Title({ currentLang, setPopupLang, setPopupMenu }) {
   function handleclickOpenPopupMenu() {
     setPopupMenu(true);
   }
-
   return (
     <div className="flex flex-row justify-center items-center gap-6">
       <img
