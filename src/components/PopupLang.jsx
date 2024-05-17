@@ -7,6 +7,7 @@ export default function PopupLang({
   dataLang,
   setCurrentLang,
   reset,
+  whiteMode,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
@@ -29,7 +30,11 @@ export default function PopupLang({
           className="popupLayout"
           onClick={handleParentClick}
         >
-          <div className="popupDefault popupLang">
+          <div
+            className={`popupDefault popupLang ${
+              whiteMode ? "bgPopupWhite" : "bgPopupDark"
+            }`}
+          >
             {dataLang.map((lang) => (
               <FlagCard
                 key={lang.id}
@@ -52,4 +57,5 @@ PopupLang.propTypes = {
   setPopupLang: PropTypes.func,
   setCurrentLang: PropTypes.func,
   reset: PropTypes.func,
+  whiteMode: PropTypes.bool,
 };

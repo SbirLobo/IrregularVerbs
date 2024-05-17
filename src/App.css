@@ -72,6 +72,14 @@
   overflow: auto;
 }
 
+.bgPopupWhite {
+  background-color: var(--bg-white-theme-popupDefault);
+}
+
+.bgPopupDark {
+  background-color: var(--bg-dark-theme-popupDefault);
+}
+
 .popupLang {
   border: solid 4px #7c429e;
   display: flex;

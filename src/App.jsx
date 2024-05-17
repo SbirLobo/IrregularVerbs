@@ -8,7 +8,8 @@ import VerbTranslation from "./components/VerbTranslation";
 import VerbCorrection from "./components/VerbCorrection";
 import languages from "./data/languages";
 import PopupLang from "./components/PopupLang";
-import PopupMenu from "./components/popupMenu";
+import PopupMenu from "./components/PopupMenu";
+import PopupAbout from "./components/PopupAbout";
 import UpdateStyles from "./components/UpdateStyle";
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
   // darkMode interruptor : bool (initialized with prefers-color-scheme)
   const mq = window.matchMedia("(prefers-color-scheme: dark)");
   const [whiteMode, setWhiteMode] = useState(mq.matches ? false : true);
+  // about popup interruptor : bool
+  const [popupAbout, setPopupAbout] = useState(false);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
@@ -103,12 +106,19 @@ function App() {
         dataLang={dataLang}
         setCurrentLang={setCurrentLang}
         reset={reset}
+        whiteMode={whiteMode}
       />
       <PopupMenu
         popupMenu={popupMenu}
         setPopupMenu={setPopupMenu}
         whiteMode={whiteMode}
         setWhiteMode={setWhiteMode}
+        setPopupAbout={setPopupAbout}
+      />
+      <PopupAbout
+        popupAbout={popupAbout}
+        setPopupAbout={setPopupAbout}
+        whiteMode={whiteMode}
       />
     </>
   );

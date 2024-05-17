@@ -5,6 +5,7 @@ export default function PopupMenu({
   setPopupMenu,
   whiteMode,
   setWhiteMode,
+  setPopupAbout,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
@@ -22,6 +23,11 @@ export default function PopupMenu({
     setWhiteMode(!whiteMode);
   }
 
+  function handleClickAbout() {
+    setPopupMenu(false);
+    setPopupAbout(true);
+  }
+
   return (
     <>
       {popupMenu && (
@@ -32,7 +38,11 @@ export default function PopupMenu({
           className="popupLayout"
           onClick={handleParentClick}
         >
-          <div className="popupDefault popupMenu">
+          <div
+            className={`popupDefault popupMenu ${
+              whiteMode ? "bgPopupWhite" : "bgPopupDark"
+            }`}
+          >
             {whiteMode ? (
               <img
                 src="/icons/white-theme.svg"
@@ -48,6 +58,12 @@ export default function PopupMenu({
                 onClick={handleClickAppearence}
               />
             )}
+            <button
+              className="menuButton text-white"
+              onClick={handleClickAbout}
+            >
+              About
+            </button>
           </div>
         </div>
       )}
@@ -60,4 +76,5 @@ PopupMenu.propTypes = {
   setPopupMenu: PropTypes.func,
   whiteMode: PropTypes.bool,
   setWhiteMode: PropTypes.func,
+  setPopupAbout: PropTypes.func,
 };
