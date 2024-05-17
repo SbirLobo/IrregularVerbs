@@ -3,6 +3,7 @@ import PopupAbout from "./PopupAbout";
 import PopupLang from "./PopupLang";
 import PopupMenu from "./PopupMenu";
 import PopupContact from "./PopupContact";
+import PopupEntireList from "./PopupEntireList";
 
 export default function PopupParent({
   popupLang,
@@ -18,27 +19,34 @@ export default function PopupParent({
   popupAbout,
   popupContact,
   setPopupContact,
+  popupEntireList,
+  setPopupEntireList,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
-      setPopupLang(false);
-      setPopupAbout(false);
-      setPopupMenu(false);
-      setPopupContact(false);
+      shutDownAllPopup();
     }
   }
   function handleParentClick(e) {
     if (e.target === e.currentTarget) {
-      setPopupAbout(false);
-      setPopupLang(false);
-      setPopupMenu(false);
-      setPopupContact(false);
+      shutDownAllPopup();
     }
+  }
+  function shutDownAllPopup() {
+    setPopupAbout(false);
+    setPopupLang(false);
+    setPopupMenu(false);
+    setPopupContact(false);
+    setPopupEntireList(false);
   }
 
   return (
     <>
-      {(popupAbout || popupLang || popupMenu || popupContact) && (
+      {(popupAbout ||
+        popupLang ||
+        popupMenu ||
+        popupContact ||
+        popupEntireList) && (
         <div
           role="button"
           tabIndex={0}
@@ -62,10 +70,12 @@ export default function PopupParent({
               setWhiteMode={setWhiteMode}
               setPopupAbout={setPopupAbout}
               setPopupContact={setPopupContact}
+              setPopupEntireList={setPopupEntireList}
             />
           )}
           {popupAbout && <PopupAbout whiteMode={whiteMode} />}
           {popupContact && <PopupContact whiteMode={whiteMode} />}
+          {popupEntireList && <PopupEntireList whiteMode={whiteMode} />}
         </div>
       )}
     </>
@@ -86,4 +96,6 @@ PopupParent.propTypes = {
   popupAbout: PropTypes.bool,
   popupContact: PropTypes.bool,
   setPopupContact: PropTypes.func,
+  popupEntireList: PropTypes.bool,
+  setPopupEntireList: PropTypes.func,
 };

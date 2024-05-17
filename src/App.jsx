@@ -43,6 +43,8 @@ function App() {
   const [popupAbout, setPopupAbout] = useState(false);
   // contact popup interruptor : bool
   const [popupContact, setPopupContact] = useState(false);
+  // entire list popup interruptor : bool
+  const [popupEntireList, setPopupEntireList] = useState(false);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
@@ -114,6 +116,8 @@ function App() {
         popupAbout={popupAbout}
         popupContact={popupContact}
         setPopupContact={setPopupContact}
+        popupEntireList={popupEntireList}
+        setPopupEntireList={setPopupEntireList}
       />
     </>
   );
