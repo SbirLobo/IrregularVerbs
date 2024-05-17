@@ -41,6 +41,10 @@ function App() {
   const [whiteMode, setWhiteMode] = useState(mq.matches ? false : true);
   // about popup interruptor : bool
   const [popupAbout, setPopupAbout] = useState(false);
+  // contact popup interruptor : bool
+  const [popupContact, setPopupContact] = useState(false);
+  // entire list popup interruptor : bool
+  const [popupEntireList, setPopupEntireList] = useState(false);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
@@ -110,6 +114,10 @@ function App() {
         setWhiteMode={setWhiteMode}
         setPopupAbout={setPopupAbout}
         popupAbout={popupAbout}
+        popupContact={popupContact}
+        setPopupContact={setPopupContact}
+        popupEntireList={popupEntireList}
+        setPopupEntireList={setPopupEntireList}
       />
     </>
   );
