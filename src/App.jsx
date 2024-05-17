@@ -1,10 +1,16 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import verbsByCommon from "./data/verbsByCommon";
+import Title from "./components/Title";
 import ListButton from "./components/ListButton";
 import GoButton from "./components/GoButton";
 import VerbTranslation from "./components/VerbTranslation";
 import VerbCorrection from "./components/VerbCorrection";
+import languages from "./data/languages";
+import PopupLang from "./components/PopupLang";
+import PopupMenu from "./components/PopupMenu";
+import PopupAbout from "./components/PopupAbout";
+import UpdateStyles from "./components/UpdateStyle";
 
 function App() {
   // data : all verbs
@@ -24,28 +30,56 @@ function App() {
   const [currentList, setCurrentList] = useState(data[0]);
   // current verb : object
   const [currentVerb, setCurrentVerb] = useState({});
+  // languages array with alpha2 code
+  const [dataLang] = useState(languages);
+  // current language selected : object example { language: "english", alpha2: "GB" }
+  const [currentLang, setCurrentLang] = useState(dataLang[0]);
+  // language popup interruptor : bool
+  const [popupLang, setPopupLang] = useState(false);
+  // menu popup interruptor : bool
+  const [popupMenu, setPopupMenu] = useState(false);
+  // darkMode interruptor : bool (initialized with prefers-color-scheme)
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const [whiteMode, setWhiteMode] = useState(mq.matches ? false : true);
+  // about popup interruptor : bool
+  const [popupAbout, setPopupAbout] = useState(false);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
     setCorrectionDisplay(0);
   }, [dataIndex, data]);
 
+  function reset() {
+    setSelectedVerbIndex(-1);
+    setCurrentList(data[dataIndex]);
+    setCorrectionDisplay(0);
+    setData([
+      verbsByCommon.slice(0, 30),
+      verbsByCommon.slice(0, 60),
+      verbsByCommon.slice(0, 90),
+      verbsByCommon,
+    ]);
+  }
+
+  useEffect(() => {
+    UpdateStyles(whiteMode);
+  }, [whiteMode]);
+
   return (
     <>
-      <div className="flex flex-col"></div>
-      <h1 className="text-3xl font-bold p-4">Irregular Verbs</h1>
-      <ListButton
-        currentList={currentList}
-        dataIndex={dataIndex}
-        data={data}
-        setDataIndex={setDataIndex}
-        setSelectedVerbIndex={setSelectedVerbIndex}
-        setCurrentList={setCurrentList}
-        setCorrectionDisplay={setCorrectionDisplay}
-        setData={setData}
-        verbsByCommon={verbsByCommon}
-      />
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center">
+        <Title
+          currentLang={currentLang}
+          setPopupLang={setPopupLang}
+          setPopupMenu={setPopupMenu}
+        />
+        <ListButton
+          currentList={currentList}
+          dataIndex={dataIndex}
+          data={data}
+          setDataIndex={setDataIndex}
+          reset={reset}
+        />
         <GoButton
           correctionDisplay={correctionDisplay}
           setCorrectionDisplay={setCorrectionDisplay}
@@ -57,12 +91,34 @@ function App() {
         <VerbTranslation
           selectedVerbIndex={selectedVerbIndex}
           currentVerb={currentVerb}
+          currentLang={currentLang}
+        />
+        <VerbCorrection
+          selectedVerbIndex={selectedVerbIndex}
+          correctionDisplay={correctionDisplay}
+          currentVerb={currentVerb}
+          whiteMode={whiteMode}
         />
       </div>
-      <VerbCorrection
-        selectedVerbIndex={selectedVerbIndex}
-        correctionDisplay={correctionDisplay}
-        currentVerb={currentVerb}
+      <PopupLang
+        popupLang={popupLang}
+        setPopupLang={setPopupLang}
+        dataLang={dataLang}
+        setCurrentLang={setCurrentLang}
+        reset={reset}
+        whiteMode={whiteMode}
+      />
+      <PopupMenu
+        popupMenu={popupMenu}
+        setPopupMenu={setPopupMenu}
+        whiteMode={whiteMode}
+        setWhiteMode={setWhiteMode}
+        setPopupAbout={setPopupAbout}
+      />
+      <PopupAbout
+        popupAbout={popupAbout}
+        setPopupAbout={setPopupAbout}
+        whiteMode={whiteMode}
       />
     </>
   );
