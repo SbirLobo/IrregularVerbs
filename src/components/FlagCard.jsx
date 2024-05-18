@@ -16,7 +16,7 @@ export default function FlagCard({
     <>
       <img
         key={lang.id}
-        className="flag"
+        className="roundedIcon flagIcon"
         src={`/flags_svg_alpha2/${lang.alpha2}.svg`}
         alt={`${lang.language} flag`}
         onClick={test}

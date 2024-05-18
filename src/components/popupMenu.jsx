@@ -1,30 +1,16 @@
 import PropTypes from "prop-types";
+import PopupMenuButtons from "./PopupMenuButtons";
 
 export default function PopupMenu({
-  setPopupMenu,
   whiteMode,
   setWhiteMode,
+  setPopupMenu,
   setPopupAbout,
   setPopupContact,
   setPopupEntireList,
 }) {
   function handleClickAppearence() {
     setWhiteMode(!whiteMode);
-  }
-
-  function handleClickAbout() {
-    setPopupMenu(false);
-    setPopupAbout(true);
-  }
-
-  function handleClickContact() {
-    setPopupMenu(false);
-    setPopupContact(true);
-  }
-
-  function handleClickEntireList() {
-    setPopupMenu(false);
-    setPopupEntireList(true);
   }
 
   return (
@@ -38,37 +24,31 @@ export default function PopupMenu({
           <img
             src="/icons/white-theme.svg"
             alt="white theme icon"
-            className="flag bg-white"
+            className="roundedIcon whiteDarkIcon bg-white"
             onClick={handleClickAppearence}
           />
         ) : (
           <img
             src="/icons/dark-theme.svg"
             alt="dark theme icon"
-            className="flag bg-white"
+            className="roundedIcon whiteDarkIcon bg-white"
             onClick={handleClickAppearence}
           />
         )}
-        <button
-          className="menuButton text-white"
-          onClick={handleClickEntireList}
-        >
-          All verbs
-        </button>
-        <button className="menuButton text-white" onClick={handleClickAbout}>
-          About
-        </button>
-        <button className="menuButton text-white" onClick={handleClickContact}>
-          Contact
-        </button>
+        <PopupMenuButtons
+          setPopupMenu={setPopupMenu}
+          setPopupAbout={setPopupAbout}
+          setPopupContact={setPopupContact}
+          setPopupEntireList={setPopupEntireList}
+        />
       </div>
     </>
   );
 }
 
 PopupMenu.propTypes = {
-  setPopupMenu: PropTypes.func,
   whiteMode: PropTypes.bool,
+  setPopupMenu: PropTypes.func,
   setWhiteMode: PropTypes.func,
   setPopupAbout: PropTypes.func,
   setPopupContact: PropTypes.func,
