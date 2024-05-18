@@ -8,7 +8,7 @@ export default function PopupAbout({ whiteMode }) {
           whiteMode ? "bgPopupWhite" : "bgPopupDark"
         }`}
       >
-        <p>test about</p>
+        <p>in development...</p>
       </div>
     </>
   );

@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
+import UpdateStyles from "./UpdateStyle";
+import VerbCard from "./VerbCard";
 
 export default function PopupEntireList({
   whiteMode,
   verbsByFrequency,
   currentLang,
 }) {
+  UpdateStyles;
   return (
     <>
       <div
@@ -16,13 +19,12 @@ export default function PopupEntireList({
           185 Irregular Verbs List by Frequency
         </p>
         {verbsByFrequency.map((verb) => (
-          <div key={verb.id} className="flex flex-col items-center gap-1 pt-8">
-            <p>({verb.id})</p>
-            <p className="verbTranslation my-0">{verb[currentLang.language]}</p>
-            <p>{verb.base_form}</p>
-            <p>{verb.past_simple}</p>
-            <p>{verb.past_participle}</p>
-          </div>
+          <VerbCard
+            key={verb.id}
+            whiteMode={whiteMode}
+            verb={verb}
+            currentLang={currentLang}
+          />
         ))}
       </div>
     </>

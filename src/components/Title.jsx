@@ -1,10 +1,17 @@
 import PropTypes from "prop-types";
 
-export default function Title({ currentLang, setPopupLang, setPopupMenu }) {
+export default function Title({
+  currentLang,
+  setPopupLang,
+  setPopupMenu,
+  shutDownAllPopup,
+}) {
   function handleclickOpenPopupLang() {
+    shutDownAllPopup();
     setPopupLang(true);
   }
   function handleclickOpenPopupMenu() {
+    shutDownAllPopup();
     setPopupMenu(true);
   }
   return (
@@ -30,4 +37,5 @@ Title.propTypes = {
   currentLang: PropTypes.object,
   setPopupLang: PropTypes.func,
   setPopupMenu: PropTypes.func,
+  shutDownAllPopup: PropTypes.func,
 };

@@ -85,6 +85,7 @@
   border-radius: 9999px;
   border: solid 4px;
   border-color: var(--border-default);
+  z-index: 2;
 }
 .menuIcon:hover {
   cursor: pointer;

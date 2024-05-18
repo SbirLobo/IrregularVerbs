@@ -8,7 +8,7 @@ export default function PopupContact({ whiteMode }) {
           whiteMode ? "bgPopupWhite" : "bgPopupDark"
         }`}
       >
-        <p>test contact</p>
+        <p>in development...</p>
       </div>
     </>
   );
