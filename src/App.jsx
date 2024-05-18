@@ -1,6 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import verbsByCommon from "./data/verbsByCommon";
+import verbsByFrequency from "./data/verbsByFrequency";
 import Title from "./components/Title";
 import ListButton from "./components/ListButton";
 import GoButton from "./components/GoButton";
@@ -13,10 +13,10 @@ import UpdateStyles from "./components/UpdateStyle";
 function App() {
   // data : all verbs
   const [data, setData] = useState([
-    verbsByCommon.slice(0, 30),
-    verbsByCommon.slice(0, 60),
-    verbsByCommon.slice(0, 90),
-    verbsByCommon,
+    verbsByFrequency.slice(0, 30),
+    verbsByFrequency.slice(0, 60),
+    verbsByFrequency.slice(0, 90),
+    verbsByFrequency,
   ]);
   // correctionDisplay (0: start, 1: translation, 2: correction) = display of the correction
   const [correctionDisplay, setCorrectionDisplay] = useState(0);
@@ -32,18 +32,15 @@ function App() {
   const [dataLang] = useState(languages);
   // current language selected : object example { language: "english", alpha2: "GB" }
   const [currentLang, setCurrentLang] = useState(dataLang[0]);
-  // language popup interruptor : bool
-  const [popupLang, setPopupLang] = useState(false);
-  // menu popup interruptor : bool
-  const [popupMenu, setPopupMenu] = useState(false);
   // darkMode interruptor : bool (initialized with prefers-color-scheme)
   const mq = window.matchMedia("(prefers-color-scheme: dark)");
   const [whiteMode, setWhiteMode] = useState(mq.matches ? false : true);
-  // about popup interruptor : bool
+  // popup interruptors : bool
+  const [popupParent, setPopupParent] = useState(false);
+  const [popupLang, setPopupLang] = useState(false);
+  const [popupMenu, setPopupMenu] = useState(false);
   const [popupAbout, setPopupAbout] = useState(false);
-  // contact popup interruptor : bool
   const [popupContact, setPopupContact] = useState(false);
-  // entire list popup interruptor : bool
   const [popupEntireList, setPopupEntireList] = useState(false);
 
   useEffect(() => {
@@ -56,16 +53,28 @@ function App() {
     setCurrentList(data[dataIndex]);
     setCorrectionDisplay(0);
     setData([
-      verbsByCommon.slice(0, 30),
-      verbsByCommon.slice(0, 60),
-      verbsByCommon.slice(0, 90),
-      verbsByCommon,
+      verbsByFrequency.slice(0, 30),
+      verbsByFrequency.slice(0, 60),
+      verbsByFrequency.slice(0, 90),
+      verbsByFrequency,
     ]);
   }
 
   useEffect(() => {
     UpdateStyles(whiteMode);
   }, [whiteMode]);
+
+  useEffect(() => {
+    if (
+      popupAbout ||
+      popupLang ||
+      popupMenu ||
+      popupContact ||
+      popupEntireList
+    ) {
+      setPopupParent(true);
+    }
+  }, [popupAbout, popupLang, popupMenu, popupContact, popupEntireList]);
 
   return (
     <>
@@ -118,6 +127,10 @@ function App() {
         setPopupContact={setPopupContact}
         popupEntireList={popupEntireList}
         setPopupEntireList={setPopupEntireList}
+        popupParent={popupParent}
+        setPopupParent={setPopupParent}
+        verbsByFrequency={verbsByFrequency}
+        currentLang={currentLang}
       />
     </>
   );

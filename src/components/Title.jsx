@@ -10,14 +10,14 @@ export default function Title({ currentLang, setPopupLang, setPopupMenu }) {
   return (
     <div className="flex flex-row justify-center items-center gap-6">
       <img
-        className="flag"
+        className="roundedIcon menuIcon"
         src="/icons/click_icon.svg"
         alt="click&learn icon"
         onClick={handleclickOpenPopupMenu}
       />
       <h1 className="text-3xl font-bold p-4">Irregular Verbs</h1>
       <img
-        className="flag"
+        className="roundedIcon flagIcon"
         src={`/flags_svg_alpha2/${currentLang.alpha2}.svg`}
         alt={`${currentLang.language} flag`}
         onClick={handleclickOpenPopupLang}

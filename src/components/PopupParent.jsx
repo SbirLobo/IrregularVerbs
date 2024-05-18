@@ -21,6 +21,10 @@ export default function PopupParent({
   setPopupContact,
   popupEntireList,
   setPopupEntireList,
+  popupParent,
+  setPopupParent,
+  verbsByFrequency,
+  currentLang,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
@@ -33,6 +37,7 @@ export default function PopupParent({
     }
   }
   function shutDownAllPopup() {
+    setPopupParent(false);
     setPopupAbout(false);
     setPopupLang(false);
     setPopupMenu(false);
@@ -42,11 +47,7 @@ export default function PopupParent({
 
   return (
     <>
-      {(popupAbout ||
-        popupLang ||
-        popupMenu ||
-        popupContact ||
-        popupEntireList) && (
+      {popupParent && (
         <div
           role="button"
           tabIndex={0}
@@ -75,7 +76,13 @@ export default function PopupParent({
           )}
           {popupAbout && <PopupAbout whiteMode={whiteMode} />}
           {popupContact && <PopupContact whiteMode={whiteMode} />}
-          {popupEntireList && <PopupEntireList whiteMode={whiteMode} />}
+          {popupEntireList && (
+            <PopupEntireList
+              whiteMode={whiteMode}
+              verbsByFrequency={verbsByFrequency}
+              currentLang={currentLang}
+            />
+          )}
         </div>
       )}
     </>
@@ -98,4 +105,8 @@ PopupParent.propTypes = {
   setPopupContact: PropTypes.func,
   popupEntireList: PropTypes.bool,
   setPopupEntireList: PropTypes.func,
+  popupParent: PropTypes.bool,
+  setPopupParent: PropTypes.func,
+  verbsByFrequency: PropTypes.arrayOf(PropTypes.object),
+  currentLang: PropTypes.object,
 };

@@ -1,5 +1,6 @@
 const verbsByCommon = [
   {
+    id: "1",
     base_form: "to be",
     past_simple: "was, were",
     past_participle: "been",
@@ -11,6 +12,7 @@ const verbsByCommon = [
     italian: "essere",
   },
   {
+    id: "2",
     base_form: "to have",
     past_simple: "had",
     past_participle: "had",
@@ -22,6 +24,7 @@ const verbsByCommon = [
     italian: "avere",
   },
   {
+    id: "3",
     base_form: "to do",
     past_simple: "did",
     past_participle: "done",
@@ -33,6 +36,7 @@ const verbsByCommon = [
     italian: "fare",
   },
   {
+    id: "4",
     base_form: "to say",
     past_simple: "said",
     past_participle: "said",
@@ -44,6 +48,7 @@ const verbsByCommon = [
     italian: "dire",
   },
   {
+    id: "5",
     base_form: "to go",
     past_simple: "went",
     past_participle: "gone",
@@ -55,6 +60,7 @@ const verbsByCommon = [
     italian: "andare",
   },
   {
+    id: "6",
     base_form: "to get",
     past_simple: "got",
     past_participle: "got, gotten",
@@ -66,6 +72,7 @@ const verbsByCommon = [
     italian: "ottenere",
   },
   {
+    id: "7",
     base_form: "to make",
     past_simple: "made",
     past_participle: "made",
@@ -77,6 +84,7 @@ const verbsByCommon = [
     italian: "produrre",
   },
   {
+    id: "8",
     base_form: "to know",
     past_simple: "knew",
     past_participle: "known",
@@ -88,6 +96,7 @@ const verbsByCommon = [
     italian: "sapere",
   },
   {
+    id: "9",
     base_form: "to think",
     past_simple: "thought",
     past_participle: "thought",
@@ -99,6 +108,7 @@ const verbsByCommon = [
     italian: "pensare",
   },
   {
+    id: "10",
     base_form: "to take",
     past_simple: "took",
     past_participle: "taken",
@@ -110,6 +120,7 @@ const verbsByCommon = [
     italian: "prendere",
   },
   {
+    id: "11",
     base_form: "to see",
     past_simple: "saw",
     past_participle: "seen",
@@ -121,6 +132,7 @@ const verbsByCommon = [
     italian: "da vedere",
   },
   {
+    id: "12",
     base_form: "to come",
     past_simple: "came",
     past_participle: "come",
@@ -132,6 +144,7 @@ const verbsByCommon = [
     italian: "venire",
   },
   {
+    id: "13",
     base_form: "to find",
     past_simple: "found",
     past_participle: "found",
@@ -143,6 +156,7 @@ const verbsByCommon = [
     italian: "trovare",
   },
   {
+    id: "14",
     base_form: "to give",
     past_simple: "gave",
     past_participle: "given",
@@ -154,6 +168,7 @@ const verbsByCommon = [
     italian: "dare",
   },
   {
+    id: "15",
     base_form: "to tell",
     past_simple: "told",
     past_participle: "told",
@@ -165,6 +180,7 @@ const verbsByCommon = [
     italian: "dire",
   },
   {
+    id: "16",
     base_form: "to feel",
     past_simple: "felt",
     past_participle: "felt",
@@ -176,6 +192,7 @@ const verbsByCommon = [
     italian: "sentire",
   },
   {
+    id: "17",
     base_form: "to become",
     past_simple: "became",
     past_participle: "become",
@@ -187,6 +204,7 @@ const verbsByCommon = [
     italian: "diventare",
   },
   {
+    id: "18",
     base_form: "to leave",
     past_simple: "left",
     past_participle: "left",
@@ -198,6 +216,7 @@ const verbsByCommon = [
     italian: "lasciare",
   },
   {
+    id: "19",
     base_form: "to put",
     past_simple: "put",
     past_participle: "put",
@@ -209,6 +228,7 @@ const verbsByCommon = [
     italian: "mettere",
   },
   {
+    id: "20",
     base_form: "to mean",
     past_simple: "meant",
     past_participle: "meant",
@@ -220,6 +240,7 @@ const verbsByCommon = [
     italian: "significare",
   },
   {
+    id: "21",
     base_form: "to keep",
     past_simple: "kept",
     past_participle: "kept",
@@ -231,6 +252,7 @@ const verbsByCommon = [
     italian: "tenere",
   },
   {
+    id: "22",
     base_form: "to let",
     past_simple: "let",
     past_participle: "let",
@@ -242,6 +264,7 @@ const verbsByCommon = [
     italian: "lasciare",
   },
   {
+    id: "23",
     base_form: "to begin",
     past_simple: "began",
     past_participle: "begun",
@@ -253,6 +276,7 @@ const verbsByCommon = [
     italian: "iniziare",
   },
   {
+    id: "24",
     base_form: "to show",
     past_simple: "showed",
     past_participle: "shown",
@@ -264,6 +288,7 @@ const verbsByCommon = [
     italian: "mostrare",
   },
   {
+    id: "25",
     base_form: "to hear",
     past_simple: "heard",
     past_participle: "heard",
@@ -275,6 +300,7 @@ const verbsByCommon = [
     italian: "ascoltare",
   },
   {
+    id: "26",
     base_form: "to run",
     past_simple: "ran",
     past_participle: "run",
@@ -286,6 +312,7 @@ const verbsByCommon = [
     italian: "correre",
   },
   {
+    id: "27",
     base_form: "to hold",
     past_simple: "held",
     past_participle: "held",
@@ -297,6 +324,7 @@ const verbsByCommon = [
     italian: "tenere",
   },
   {
+    id: "28",
     base_form: "to bring",
     past_simple: "brought",
     past_participle: "brought",
@@ -308,6 +336,7 @@ const verbsByCommon = [
     italian: "portare",
   },
   {
+    id: "29",
     base_form: "to write",
     past_simple: "wrote",
     past_participle: "written",
@@ -319,6 +348,7 @@ const verbsByCommon = [
     italian: "scrivere",
   },
   {
+    id: "30",
     base_form: "to sit",
     past_simple: "sat",
     past_participle: "sat",
@@ -330,6 +360,7 @@ const verbsByCommon = [
     italian: "sedere",
   },
   {
+    id: "31",
     base_form: "to stand",
     past_simple: "stood",
     past_participle: "stood",
@@ -341,6 +372,7 @@ const verbsByCommon = [
     italian: "Stare in piedi",
   },
   {
+    id: "32",
     base_form: "to lose",
     past_simple: "lost",
     past_participle: "lost",
@@ -352,6 +384,7 @@ const verbsByCommon = [
     italian: "perdere",
   },
   {
+    id: "33",
     base_form: "to pay",
     past_simple: "paid",
     past_participle: "paid",
@@ -363,6 +396,7 @@ const verbsByCommon = [
     italian: "pagare",
   },
   {
+    id: "34",
     base_form: "to meet",
     past_simple: "met",
     past_participle: "met",
@@ -374,6 +408,7 @@ const verbsByCommon = [
     italian: "incontrare",
   },
   {
+    id: "35",
     base_form: "to set",
     past_simple: "set",
     past_participle: "set",
@@ -385,6 +420,7 @@ const verbsByCommon = [
     italian: "impostare",
   },
   {
+    id: "36",
     base_form: "to learn",
     past_simple: "learnt, learned",
     past_participle: "learnt, learned",
@@ -396,6 +432,7 @@ const verbsByCommon = [
     italian: "per imparare",
   },
   {
+    id: "37",
     base_form: "to lead",
     past_simple: "led",
     past_participle: "led",
@@ -407,6 +444,7 @@ const verbsByCommon = [
     italian: "condurre",
   },
   {
+    id: "38",
     base_form: "to understand",
     past_simple: "understood",
     past_participle: "understood",
@@ -418,6 +456,7 @@ const verbsByCommon = [
     italian: "capire",
   },
   {
+    id: "39",
     base_form: "to speak",
     past_simple: "spoke",
     past_participle: "spoken",
@@ -429,6 +468,7 @@ const verbsByCommon = [
     italian: "parlare",
   },
   {
+    id: "40",
     base_form: "to read",
     past_simple: "read",
     past_participle: "read",
@@ -440,6 +480,7 @@ const verbsByCommon = [
     italian: "leggere",
   },
   {
+    id: "41",
     base_form: "to spend",
     past_simple: "spent",
     past_participle: "spent",
@@ -451,6 +492,7 @@ const verbsByCommon = [
     italian: "spendere",
   },
   {
+    id: "42",
     base_form: "to grow",
     past_simple: "grew",
     past_participle: "grown",
@@ -462,6 +504,7 @@ const verbsByCommon = [
     italian: "crescere",
   },
   {
+    id: "43",
     base_form: "to win",
     past_simple: "won",
     past_participle: "won",
@@ -473,6 +516,7 @@ const verbsByCommon = [
     italian: "vincere",
   },
   {
+    id: "44",
     base_form: "to buy",
     past_simple: "bought",
     past_participle: "bought",
@@ -484,6 +528,7 @@ const verbsByCommon = [
     italian: "comprare",
   },
   {
+    id: "45",
     base_form: "to send",
     past_simple: "sent",
     past_participle: "sent",
@@ -495,6 +540,7 @@ const verbsByCommon = [
     italian: "inviare",
   },
   {
+    id: "46",
     base_form: "to build",
     past_simple: "built",
     past_participle: "built",
@@ -506,6 +552,7 @@ const verbsByCommon = [
     italian: "costruire",
   },
   {
+    id: "47",
     base_form: "to fall",
     past_simple: "fell",
     past_participle: "fallen",
@@ -517,6 +564,7 @@ const verbsByCommon = [
     italian: "cadere",
   },
   {
+    id: "48",
     base_form: "to cut",
     past_simple: "cut",
     past_participle: "cut",
@@ -528,6 +576,7 @@ const verbsByCommon = [
     italian: "tagliare",
   },
   {
+    id: "49",
     base_form: "to sell",
     past_simple: "sold",
     past_participle: "sold",
@@ -539,6 +588,7 @@ const verbsByCommon = [
     italian: "vendere",
   },
   {
+    id: "50",
     base_form: "to light",
     past_simple: "lit",
     past_participle: "lit",
@@ -550,6 +600,7 @@ const verbsByCommon = [
     italian: "alla luce",
   },
   {
+    id: "51",
     base_form: "to drive",
     past_simple: "drove",
     past_participle: "driven",
@@ -561,6 +612,7 @@ const verbsByCommon = [
     italian: "guidare",
   },
   {
+    id: "52",
     base_form: "to break",
     past_simple: "broke",
     past_participle: "broken",
@@ -572,6 +624,7 @@ const verbsByCommon = [
     italian: "rompere",
   },
   {
+    id: "53",
     base_form: "to wear",
     past_simple: "wore",
     past_participle: "worn",
@@ -583,6 +636,7 @@ const verbsByCommon = [
     italian: "indossare",
   },
   {
+    id: "54",
     base_form: "to hit",
     past_simple: "hit",
     past_participle: "hit",
@@ -594,6 +648,7 @@ const verbsByCommon = [
     italian: "colpire",
   },
   {
+    id: "55",
     base_form: "to eat",
     past_simple: "ate",
     past_participle: "eaten",
@@ -605,6 +660,7 @@ const verbsByCommon = [
     italian: "mangiare",
   },
   {
+    id: "56",
     base_form: "to teach",
     past_simple: "taught",
     past_participle: "taught",
@@ -616,6 +672,7 @@ const verbsByCommon = [
     italian: "insegnare",
   },
   {
+    id: "57",
     base_form: "to cost",
     past_simple: "cost",
     past_participle: "cost",
@@ -627,6 +684,7 @@ const verbsByCommon = [
     italian: "costare",
   },
   {
+    id: "58",
     base_form: "to catch",
     past_simple: "caught",
     past_participle: "caught",
@@ -638,6 +696,7 @@ const verbsByCommon = [
     italian: "catturare",
   },
   {
+    id: "59",
     base_form: "to draw",
     past_simple: "drew",
     past_participle: "drawn",
@@ -649,6 +708,7 @@ const verbsByCommon = [
     italian: "disegnare",
   },
   {
+    id: "60",
     base_form: "to choose",
     past_simple: "chose",
     past_participle: "chosen",
@@ -660,6 +720,7 @@ const verbsByCommon = [
     italian: "scegliere",
   },
   {
+    id: "61",
     base_form: "to seek",
     past_simple: "sought",
     past_participle: "sought",
@@ -671,6 +732,7 @@ const verbsByCommon = [
     italian: "cercare",
   },
   {
+    id: "62",
     base_form: "to deal",
     past_simple: "dealt",
     past_participle: "dealt",
@@ -682,6 +744,7 @@ const verbsByCommon = [
     italian: "trattare",
   },
   {
+    id: "63",
     base_form: "to fight",
     past_simple: "fought",
     past_participle: "fought",
@@ -693,6 +756,7 @@ const verbsByCommon = [
     italian: "combattere",
   },
   {
+    id: "64",
     base_form: "to throw",
     past_simple: "threw",
     past_participle: "thrown",
@@ -704,6 +768,7 @@ const verbsByCommon = [
     italian: "gettare",
   },
   {
+    id: "65",
     base_form: "to rise",
     past_simple: "rose",
     past_participle: "risen",
@@ -715,6 +780,7 @@ const verbsByCommon = [
     italian: "salire",
   },
   {
+    id: "66",
     base_form: "to shoot",
     past_simple: "shot",
     past_participle: "shot",
@@ -726,6 +792,7 @@ const verbsByCommon = [
     italian: "sparare",
   },
   {
+    id: "67",
     base_form: "to lie",
     past_simple: "lay",
     past_participle: "lain",
@@ -737,6 +804,7 @@ const verbsByCommon = [
     italian: "mentire",
   },
   {
+    id: "68",
     base_form: "to lay",
     past_simple: "laid",
     past_participle: "laid",
@@ -748,6 +816,7 @@ const verbsByCommon = [
     italian: "giacere",
   },
   {
+    id: "69",
     base_form: "to prove",
     past_simple: "proved",
     past_participle: "proven, proved",
@@ -759,6 +828,7 @@ const verbsByCommon = [
     italian: "provare",
   },
   {
+    id: "70",
     base_form: "to hang",
     past_simple: "hung, hanged",
     past_participle: "hung, hanged",
@@ -770,6 +840,7 @@ const verbsByCommon = [
     italian: "appendere",
   },
   {
+    id: "71",
     base_form: "to forget",
     past_simple: "forgot",
     past_participle: "forgotten",
@@ -781,6 +852,7 @@ const verbsByCommon = [
     italian: "dimenticare",
   },
   {
+    id: "72",
     base_form: "to spring",
     past_simple: "sprang",
     past_participle: "sprung",
@@ -792,6 +864,7 @@ const verbsByCommon = [
     italian: "saltare",
   },
   {
+    id: "73",
     base_form: "to shake",
     past_simple: "shook",
     past_participle: "shaken",
@@ -803,6 +876,7 @@ const verbsByCommon = [
     italian: "a scuotere",
   },
   {
+    id: "74",
     base_form: "to fly",
     past_simple: "flew",
     past_participle: "flown",
@@ -814,6 +888,7 @@ const verbsByCommon = [
     italian: "volare",
   },
   {
+    id: "75",
     base_form: "to dream",
     past_simple: "dreamt, dreamed",
     past_participle: "dreamt, dreamed",
@@ -825,6 +900,7 @@ const verbsByCommon = [
     italian: "sognare",
   },
   {
+    id: "76",
     base_form: "to sing",
     past_simple: "sang",
     past_participle: "sung",
@@ -836,6 +912,7 @@ const verbsByCommon = [
     italian: "cantare",
   },
   {
+    id: "77",
     base_form: "to beat",
     past_simple: "beat",
     past_participle: "beaten",
@@ -847,6 +924,7 @@ const verbsByCommon = [
     italian: "battere",
   },
   {
+    id: "78",
     base_form: "to wind",
     past_simple: "wound",
     past_participle: "wound",
@@ -858,6 +936,7 @@ const verbsByCommon = [
     italian: "avvolgere",
   },
   {
+    id: "79",
     base_form: "to hurt",
     past_simple: "hurt",
     past_participle: "hurt",
@@ -869,6 +948,7 @@ const verbsByCommon = [
     italian: "ferire",
   },
   {
+    id: "80",
     base_form: "to strike",
     past_simple: "struck",
     past_participle: "struck, stricken",
@@ -880,6 +960,7 @@ const verbsByCommon = [
     italian: "colpire",
   },
   {
+    id: "81",
     base_form: "to sleep",
     past_simple: "slept",
     past_participle: "slept",
@@ -891,6 +972,7 @@ const verbsByCommon = [
     italian: "dormire",
   },
   {
+    id: "82",
     base_form: "to stick",
     past_simple: "stuck",
     past_participle: "stuck",
@@ -902,6 +984,7 @@ const verbsByCommon = [
     italian: "attaccare",
   },
   {
+    id: "83",
     base_form: "to drink",
     past_simple: "drank",
     past_participle: "drunk",
@@ -913,6 +996,7 @@ const verbsByCommon = [
     italian: "bere",
   },
   {
+    id: "84",
     base_form: "to hide",
     past_simple: "hid",
     past_participle: "hidden",
@@ -924,6 +1008,7 @@ const verbsByCommon = [
     italian: "nascondere",
   },
   {
+    id: "85",
     base_form: "to ride",
     past_simple: "rode",
     past_participle: "ridden",
@@ -935,6 +1020,7 @@ const verbsByCommon = [
     italian: "cavalcare",
   },
   {
+    id: "86",
     base_form: "to feed",
     past_simple: "fed",
     past_participle: "fed",
@@ -946,6 +1032,7 @@ const verbsByCommon = [
     italian: "nutrire",
   },
   {
+    id: "87",
     base_form: "to fit",
     past_simple: "fit, fitted",
     past_participle: "fit, fitted",
@@ -957,6 +1044,7 @@ const verbsByCommon = [
     italian: "adattarsi",
   },
   {
+    id: "88",
     base_form: "to spread",
     past_simple: "spread",
     past_participle: "spread",
@@ -968,6 +1056,7 @@ const verbsByCommon = [
     italian: "spargere",
   },
   {
+    id: "89",
     base_form: "to speed",
     past_simple: "sped, speeded",
     past_participle: "sped, speeded",
@@ -979,6 +1068,7 @@ const verbsByCommon = [
     italian: "accelerare",
   },
   {
+    id: "90",
     base_form: "to blow",
     past_simple: "blew",
     past_participle: "blown",
@@ -990,6 +1080,7 @@ const verbsByCommon = [
     italian: "soffiare",
   },
   {
+    id: "91",
     base_form: "to burn",
     past_simple: "burnt, burned",
     past_participle: "burnt, burned",
@@ -1001,6 +1092,7 @@ const verbsByCommon = [
     italian: "bruciare",
   },
   {
+    id: "92",
     base_form: "to lean",
     past_simple: "leant, leaned",
     past_participle: "leant, leaned",
@@ -1012,6 +1104,7 @@ const verbsByCommon = [
     italian: "appoggiarsi",
   },
   {
+    id: "93",
     base_form: "to shut",
     past_simple: "shut",
     past_participle: "shut",
@@ -1023,6 +1116,7 @@ const verbsByCommon = [
     italian: "chiudere",
   },
   {
+    id: "94",
     base_form: "to bear",
     past_simple: "bore",
     past_participle: "born, borne",
@@ -1034,6 +1128,7 @@ const verbsByCommon = [
     italian: "sopportare",
   },
   {
+    id: "95",
     base_form: "to ring",
     past_simple: "rang",
     past_participle: "rung",
@@ -1045,6 +1140,7 @@ const verbsByCommon = [
     italian: "suonare",
   },
   {
+    id: "96",
     base_form: "to wake",
     past_simple: "woke",
     past_participle: "woken",
@@ -1056,6 +1152,7 @@ const verbsByCommon = [
     italian: "svegliare",
   },
   {
+    id: "97",
     base_form: "to steal",
     past_simple: "stole",
     past_participle: "stolen",
@@ -1067,6 +1164,7 @@ const verbsByCommon = [
     italian: "rubare",
   },
   {
+    id: "98",
     base_form: "to tear",
     past_simple: "tore",
     past_participle: "torn",
@@ -1078,6 +1176,7 @@ const verbsByCommon = [
     italian: "strappare",
   },
   {
+    id: "99",
     base_form: "to cast",
     past_simple: "cast",
     past_participle: "cast",
@@ -1089,6 +1188,7 @@ const verbsByCommon = [
     italian: "lanciare",
   },
   {
+    id: "100",
     base_form: "to slide",
     past_simple: "slid",
     past_participle: "slid, slidden",
@@ -1100,6 +1200,7 @@ const verbsByCommon = [
     italian: "scorrere",
   },
   {
+    id: "101",
     base_form: "to bend",
     past_simple: "bent",
     past_participle: "bent",
@@ -1111,6 +1212,7 @@ const verbsByCommon = [
     italian: "piegare",
   },
   {
+    id: "102",
     base_form: "to smell",
     past_simple: "smelt, smelled",
     past_participle: "smelt, smelled",
@@ -1122,6 +1224,7 @@ const verbsByCommon = [
     italian: "annusare",
   },
   {
+    id: "103",
     base_form: "to swing",
     past_simple: "swung",
     past_participle: "swung",
@@ -1133,6 +1236,7 @@ const verbsByCommon = [
     italian: "oscillare",
   },
   {
+    id: "104",
     base_form: "to dig",
     past_simple: "dug",
     past_participle: "dug",
@@ -1144,6 +1248,7 @@ const verbsByCommon = [
     italian: "scavare",
   },
   {
+    id: "105",
     base_form: "to bind",
     past_simple: "bound",
     past_participle: "bound",
@@ -1155,6 +1260,7 @@ const verbsByCommon = [
     italian: "legare",
   },
   {
+    id: "106",
     base_form: "to quit",
     past_simple: "quit",
     past_participle: "quit",
@@ -1166,6 +1272,7 @@ const verbsByCommon = [
     italian: "abbandonare",
   },
   {
+    id: "107",
     base_form: "to arise",
     past_simple: "arose",
     past_participle: "arisen",
@@ -1177,6 +1284,7 @@ const verbsByCommon = [
     italian: "sorgere",
   },
   {
+    id: "108",
     base_form: "to sweep",
     past_simple: "swept, sweeped",
     past_participle: "swept, sweeped",
@@ -1188,6 +1296,7 @@ const verbsByCommon = [
     italian: "spazzare",
   },
   {
+    id: "109",
     base_form: "to spin",
     past_simple: "span, spun",
     past_participle: "spun",
@@ -1199,6 +1308,7 @@ const verbsByCommon = [
     italian: "girare",
   },
   {
+    id: "110",
     base_form: "to bet",
     past_simple: "bet",
     past_participle: "bet",
@@ -1210,6 +1320,7 @@ const verbsByCommon = [
     italian: "scommettere",
   },
   {
+    id: "111",
     base_form: "to strip",
     past_simple: "stript, stripped",
     past_participle: "stript, stripped",
@@ -1221,6 +1332,7 @@ const verbsByCommon = [
     italian: "spogliarsi",
   },
   {
+    id: "112",
     base_form: "to withdraw",
     past_simple: "withdrew",
     past_participle: "withdrawn",
@@ -1232,6 +1344,7 @@ const verbsByCommon = [
     italian: "ritirarsi",
   },
   {
+    id: "113",
     base_form: "to freeze",
     past_simple: "froze",
     past_participle: "frozen",
@@ -1243,6 +1356,7 @@ const verbsByCommon = [
     italian: "congelare",
   },
   {
+    id: "114",
     base_form: "to sink",
     past_simple: "sank",
     past_participle: "sunk",
@@ -1254,6 +1368,7 @@ const verbsByCommon = [
     italian: "affondare",
   },
   {
+    id: "115",
     base_form: "to swim",
     past_simple: "swam",
     past_participle: "swum",
@@ -1265,6 +1380,7 @@ const verbsByCommon = [
     italian: "nuotare",
   },
   {
+    id: "116",
     base_form: "to split",
     past_simple: "split",
     past_participle: "split",
@@ -1276,6 +1392,7 @@ const verbsByCommon = [
     italian: "dividere",
   },
   {
+    id: "117",
     base_form: "to flee",
     past_simple: "fled",
     past_participle: "fled",
@@ -1287,6 +1404,7 @@ const verbsByCommon = [
     italian: "fuggire",
   },
   {
+    id: "118",
     base_form: "to rid",
     past_simple: "rid, ridded",
     past_participle: "rid, ridded",
@@ -1298,6 +1416,7 @@ const verbsByCommon = [
     italian: "liberarsi di",
   },
   {
+    id: "119",
     base_form: "to undergo",
     past_simple: "underwent",
     past_participle: "undergone",
@@ -1309,6 +1428,7 @@ const verbsByCommon = [
     italian: "sottoporsi",
   },
   {
+    id: "120",
     base_form: "to bite",
     past_simple: "bit",
     past_participle: "bitten",
@@ -1320,6 +1440,7 @@ const verbsByCommon = [
     italian: "mordere",
   },
   {
+    id: "121",
     base_form: "to swear",
     past_simple: "swore",
     past_participle: "sworn",
@@ -1331,6 +1452,7 @@ const verbsByCommon = [
     italian: "giurare",
   },
   {
+    id: "122",
     base_form: "to dare",
     past_simple: "dared, durst",
     past_participle: "dared",
@@ -1342,6 +1464,7 @@ const verbsByCommon = [
     italian: "osare",
   },
   {
+    id: "123",
     base_form: "to shine",
     past_simple: "shone",
     past_participle: "shone",
@@ -1353,6 +1476,7 @@ const verbsByCommon = [
     italian: "brillare",
   },
   {
+    id: "124",
     base_form: "to upset",
     past_simple: "upset",
     past_participle: "upset",
@@ -1364,6 +1488,7 @@ const verbsByCommon = [
     italian: "offendere",
   },
   {
+    id: "125",
     base_form: "to melt",
     past_simple: "melted",
     past_participle: "molten, melted",
@@ -1375,6 +1500,7 @@ const verbsByCommon = [
     italian: "sciogliere",
   },
   {
+    id: "126",
     base_form: "to lend",
     past_simple: "lent",
     past_participle: "lent",
@@ -1386,6 +1512,7 @@ const verbsByCommon = [
     italian: "prestare",
   },
   {
+    id: "127",
     base_form: "to burst",
     past_simple: "burst",
     past_participle: "burst",
@@ -1397,6 +1524,7 @@ const verbsByCommon = [
     italian: "per scoppiare",
   },
   {
+    id: "128",
     base_form: "to forgive",
     past_simple: "forgave",
     past_participle: "forgiven",
@@ -1408,6 +1536,7 @@ const verbsByCommon = [
     italian: "perdonare",
   },
   {
+    id: "129",
     base_form: "to broadcast",
     past_simple: "broadcast, broadcasted",
     past_participle: "broadcast, broadcasted",
@@ -1419,6 +1548,7 @@ const verbsByCommon = [
     italian: "trasmettere",
   },
   {
+    id: "130",
     base_form: "to leap",
     past_simple: "leapt, leaped",
     past_participle: "leapt, leaped",
@@ -1430,6 +1560,7 @@ const verbsByCommon = [
     italian: "saltare",
   },
   {
+    id: "131",
     base_form: "to spill",
     past_simple: "spilt, spilled",
     past_participle: "spilt, spilled",
@@ -1441,6 +1572,7 @@ const verbsByCommon = [
     italian: "versare",
   },
   {
+    id: "132",
     base_form: "to undertake",
     past_simple: "undertook",
     past_participle: "undertaken",
@@ -1452,6 +1584,7 @@ const verbsByCommon = [
     italian: "intraprendere",
   },
   {
+    id: "133",
     base_form: "to spell",
     past_simple: "spelt, spelled",
     past_participle: "spelt, spelled",
@@ -1463,6 +1596,7 @@ const verbsByCommon = [
     italian: "fare lo spelling",
   },
   {
+    id: "134",
     base_form: "to shed",
     past_simple: "shed",
     past_participle: "shed",
@@ -1474,6 +1608,7 @@ const verbsByCommon = [
     italian: "spargere",
   },
   {
+    id: "135",
     base_form: "to shrink",
     past_simple: "shrank",
     past_participle: "shrunk",
@@ -1485,6 +1620,7 @@ const verbsByCommon = [
     italian: "restringere",
   },
   {
+    id: "136",
     base_form: "to sneak",
     past_simple: "sneaked, snuck",
     past_participle: "sneaked, snuck",
@@ -1496,6 +1632,7 @@ const verbsByCommon = [
     italian: "di nascosto",
   },
   {
+    id: "137",
     base_form: "to cling",
     past_simple: "clung",
     past_participle: "clung",
@@ -1507,6 +1644,7 @@ const verbsByCommon = [
     italian: "aggrapparsi",
   },
   {
+    id: "138",
     base_form: "to thrive",
     past_simple: "throve, thrived",
     past_participle: "thriven, thrived",
@@ -1518,6 +1656,7 @@ const verbsByCommon = [
     italian: "prosperare",
   },
   {
+    id: "139",
     base_form: "to forbid",
     past_simple: "forbade, forbad",
     past_participle: "forbidden",
@@ -1529,6 +1668,7 @@ const verbsByCommon = [
     italian: "vietare",
   },
   {
+    id: "140",
     base_form: "to swell",
     past_simple: "swelled",
     past_participle: "swollen",
@@ -1540,6 +1680,7 @@ const verbsByCommon = [
     italian: "crescere",
   },
   {
+    id: "141",
     base_form: "to weave",
     past_simple: "wove",
     past_participle: "woven",
@@ -1551,6 +1692,7 @@ const verbsByCommon = [
     italian: "Ondeggiare",
   },
   {
+    id: "142",
     base_form: "to spit",
     past_simple: "spat, spit",
     past_participle: "spat, spit",
@@ -1562,6 +1704,7 @@ const verbsByCommon = [
     italian: "sputare",
   },
   {
+    id: "143",
     base_form: "to kneel",
     past_simple: "knelt, kneeled",
     past_participle: "knelt, kneeled",
@@ -1573,6 +1716,7 @@ const verbsByCommon = [
     italian: "inginocchiarsi",
   },
   {
+    id: "144",
     base_form: "to abide",
     past_simple: "abode",
     past_participle: "abode",
@@ -1584,6 +1728,7 @@ const verbsByCommon = [
     italian: "a rispettare",
   },
   {
+    id: "145",
     base_form: "to awake",
     past_simple: "awoke",
     past_participle: "awoken",
@@ -1595,6 +1740,7 @@ const verbsByCommon = [
     italian: "svegliare",
   },
   {
+    id: "146",
     base_form: "to beget",
     past_simple: "begat, begot",
     past_participle: "begotten",
@@ -1606,6 +1752,7 @@ const verbsByCommon = [
     italian: "generare",
   },
   {
+    id: "147",
     base_form: "to bid",
     past_simple: "bid, bade",
     past_participle: "bid, bidden",
@@ -1617,6 +1764,7 @@ const verbsByCommon = [
     italian: "fare offerte",
   },
   {
+    id: "148",
     base_form: "to bleed",
     past_simple: "bled",
     past_participle: "bled",
@@ -1628,6 +1776,7 @@ const verbsByCommon = [
     italian: "sanguinare",
   },
   {
+    id: "149",
     base_form: "to breed",
     past_simple: "bred",
     past_participle: "bred",
@@ -1639,6 +1788,7 @@ const verbsByCommon = [
     italian: "allevare",
   },
   {
+    id: "150",
     base_form: "to can",
     past_simple: "could",
     past_participle: "could",
@@ -1650,6 +1800,7 @@ const verbsByCommon = [
     italian: "potere",
   },
   {
+    id: "151",
     base_form: "to chide",
     past_simple: "chid, chode",
     past_participle: "chid, chidden",
@@ -1661,6 +1812,7 @@ const verbsByCommon = [
     italian: "rimproverare",
   },
   {
+    id: "152",
     base_form: "to clothe",
     past_simple: "clad, clothed",
     past_participle: "clad, clothed",
@@ -1672,6 +1824,7 @@ const verbsByCommon = [
     italian: "vestire",
   },
   {
+    id: "153",
     base_form: "to creep",
     past_simple: "crept",
     past_participle: "crept",
@@ -1683,6 +1836,7 @@ const verbsByCommon = [
     italian: "spaventare",
   },
   {
+    id: "154",
     base_form: "to dive",
     past_simple: "dived",
     past_participle: "dived, dove",
@@ -1694,6 +1848,7 @@ const verbsByCommon = [
     italian: "immergersi",
   },
   {
+    id: "155",
     base_form: "to dwell",
     past_simple: "dwelt",
     past_participle: "dwelt, dwelled",
@@ -1705,6 +1860,7 @@ const verbsByCommon = [
     italian: "abitare",
   },
   {
+    id: "156",
     base_form: "to forecast",
     past_simple: "forecast",
     past_participle: "forecast",
@@ -1716,6 +1872,7 @@ const verbsByCommon = [
     italian: "prevedere",
   },
   {
+    id: "157",
     base_form: "to foresee",
     past_simple: "foresaw",
     past_participle: "foreseen",
@@ -1727,6 +1884,7 @@ const verbsByCommon = [
     italian: "prevedere",
   },
   {
+    id: "158",
     base_form: "to forsake",
     past_simple: "forsook",
     past_participle: "forsaken",
@@ -1738,6 +1896,7 @@ const verbsByCommon = [
     italian: "abbandonare",
   },
   {
+    id: "159",
     base_form: "to grind",
     past_simple: "ground",
     past_participle: "ground",
@@ -1749,6 +1908,7 @@ const verbsByCommon = [
     italian: "per macinare",
   },
   {
+    id: "160",
     base_form: "to mow",
     past_simple: "mowed",
     past_participle: "mowed, mown",
@@ -1760,6 +1920,7 @@ const verbsByCommon = [
     italian: "falciare",
   },
   {
+    id: "161",
     base_form: "to offset",
     past_simple: "offset",
     past_participle: "offset",
@@ -1771,6 +1932,7 @@ const verbsByCommon = [
     italian: "compensare",
   },
   {
+    id: "162",
     base_form: "to overcome",
     past_simple: "overcame",
     past_participle: "overcome",
@@ -1782,6 +1944,7 @@ const verbsByCommon = [
     italian: "superare",
   },
   {
+    id: "163",
     base_form: "to partake",
     past_simple: "partook",
     past_participle: "partaken",
@@ -1793,6 +1956,7 @@ const verbsByCommon = [
     italian: "partecipare",
   },
   {
+    id: "164",
     base_form: "to plead",
     past_simple: "pled, pleaded",
     past_participle: "pled, pleaded",
@@ -1804,6 +1968,7 @@ const verbsByCommon = [
     italian: "supplicare",
   },
   {
+    id: "165",
     base_form: "to preset",
     past_simple: "preset",
     past_participle: "preset",
@@ -1815,6 +1980,7 @@ const verbsByCommon = [
     italian: "preimpostare",
   },
   {
+    id: "166",
     base_form: "to relay",
     past_simple: "relaid",
     past_participle: "relaid",
@@ -1826,6 +1992,7 @@ const verbsByCommon = [
     italian: "trasmettere",
   },
   {
+    id: "167",
     base_form: "to rend",
     past_simple: "rent",
     past_participle: "rent",
@@ -1837,6 +2004,7 @@ const verbsByCommon = [
     italian: "strappare",
   },
   {
+    id: "168",
     base_form: "to saw",
     past_simple: "saw, sawed",
     past_participle: "sawn, sawed",
@@ -1848,6 +2016,7 @@ const verbsByCommon = [
     italian: "segare",
   },
   {
+    id: "169",
     base_form: "to shoe",
     past_simple: "shod",
     past_participle: "shod",
@@ -1859,6 +2028,7 @@ const verbsByCommon = [
     italian: "calzare",
   },
   {
+    id: "170",
     base_form: "to slay",
     past_simple: "slew",
     past_participle: "slain",
@@ -1870,6 +2040,7 @@ const verbsByCommon = [
     italian: "uccidere",
   },
   {
+    id: "171",
     base_form: "to slink",
     past_simple: "slunk, slinked",
     past_participle: "slunk, slinked",
@@ -1881,6 +2052,7 @@ const verbsByCommon = [
     italian: "sgattaiolare",
   },
   {
+    id: "172",
     base_form: "to slit",
     past_simple: "slit",
     past_participle: "slit",
@@ -1892,6 +2064,7 @@ const verbsByCommon = [
     italian: "tagliare",
   },
   {
+    id: "173",
     base_form: "to sow",
     past_simple: "sowed",
     past_participle: "sown, sowed",
@@ -1903,6 +2076,7 @@ const verbsByCommon = [
     italian: "seminare",
   },
   {
+    id: "174",
     base_form: "to spoil",
     past_simple: "spoilt",
     past_participle: "spoilt",
@@ -1914,6 +2088,7 @@ const verbsByCommon = [
     italian: "rovinare",
   },
   {
+    id: "175",
     base_form: "to sting",
     past_simple: "stung",
     past_participle: "stung",
@@ -1925,6 +2100,7 @@ const verbsByCommon = [
     italian: "pungere",
   },
   {
+    id: "176",
     base_form: "to stink",
     past_simple: "stank",
     past_participle: "stunk",
@@ -1936,6 +2112,7 @@ const verbsByCommon = [
     italian: "puzzare",
   },
   {
+    id: "177",
     base_form: "to strew",
     past_simple: "strewed",
     past_participle: "strewn, strewed",
@@ -1947,6 +2124,7 @@ const verbsByCommon = [
     italian: "spargere",
   },
   {
+    id: "178",
     base_form: "to strive",
     past_simple: "strove",
     past_participle: "striven",
@@ -1958,6 +2136,7 @@ const verbsByCommon = [
     italian: "sforzarsi",
   },
   {
+    id: "179",
     base_form: "to sweat",
     past_simple: "sweat, sweated",
     past_participle: "sweat, sweated",
@@ -1969,6 +2148,7 @@ const verbsByCommon = [
     italian: "sudare",
   },
   {
+    id: "180",
     base_form: "to thrust",
     past_simple: "thrust",
     past_participle: "thrust",
@@ -1980,6 +2160,7 @@ const verbsByCommon = [
     italian: "spingere",
   },
   {
+    id: "181",
     base_form: "to tread",
     past_simple: "trod",
     past_participle: "trodden",
@@ -1991,6 +2172,7 @@ const verbsByCommon = [
     italian: "percorrere",
   },
   {
+    id: "182",
     base_form: "to typeset",
     past_simple: "typeset",
     past_participle: "typeset",
@@ -2002,6 +2184,7 @@ const verbsByCommon = [
     italian: "impaginare",
   },
   {
+    id: "183",
     base_form: "to weep",
     past_simple: "wept",
     past_participle: "wept",
@@ -2013,6 +2196,7 @@ const verbsByCommon = [
     italian: "piangere",
   },
   {
+    id: "184",
     base_form: "to wet",
     past_simple: "wet, wetted",
     past_participle: "wet, wetted",
@@ -2024,6 +2208,7 @@ const verbsByCommon = [
     italian: "bagnare",
   },
   {
+    id: "185",
     base_form: "to wring",
     past_simple: "wrung",
     past_participle: "wrung",
