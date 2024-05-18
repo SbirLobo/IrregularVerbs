@@ -5,11 +5,12 @@ export default function VerbCorrection({
   selectedVerbIndex,
   correctionDisplay,
   currentVerb,
+  whiteMode,
 }) {
   return (
     <>
       {selectedVerbIndex !== -1 && correctionDisplay === 2 && (
-        <div className="flex flex-col MY-8 items-center">
+        <div className="flex flex-col my-8 items-center">
           <p className="text-xl">{currentVerb.base_form}</p>
           <p className="text-xl">{currentVerb.past_simple}</p>
           <p className="text-xl">{currentVerb.past_participle}</p>
@@ -18,6 +19,7 @@ export default function VerbCorrection({
             base_form={currentVerb.base_form}
             past_simple={currentVerb.past_simple}
             past_participle={currentVerb.past_participle}
+            whiteMode={whiteMode}
           />
         </div>
       )}
@@ -31,4 +33,5 @@ VerbCorrection.propTypes = {
   currentVerb: PropTypes.object,
   audioClick: PropTypes.bool,
   setAudioClick: PropTypes.func,
+  whiteMode: PropTypes.bool,
 };

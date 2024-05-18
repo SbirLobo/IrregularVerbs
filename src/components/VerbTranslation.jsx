@@ -7,11 +7,9 @@ export default function VerbTranslation({
 }) {
   return (
     <>
-      {selectedVerbIndex !== -1 && (
-        <p className="text-xl my-8 verbTranslation">
-          {currentVerb[currentLang.language]}
-        </p>
-      )}
+      <p className="verbTranslation">
+        {selectedVerbIndex !== -1 && currentVerb[currentLang.language]}
+      </p>
     </>
   );
 }

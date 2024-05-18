@@ -1,21 +1,22 @@
 import "./App.css";
 import { useState, useEffect } from "react";
-import verbsByCommon from "./data/verbsByCommon";
+import verbsByFrequency from "./data/verbsByFrequency";
 import Title from "./components/Title";
 import ListButton from "./components/ListButton";
 import GoButton from "./components/GoButton";
 import VerbTranslation from "./components/VerbTranslation";
 import VerbCorrection from "./components/VerbCorrection";
 import languages from "./data/languages";
-import PopupLang from "./components/PopupLang";
+import PopupParent from "./components/PopupParent";
+import UpdateStyles from "./components/UpdateStyle";
 
 function App() {
   // data : all verbs
   const [data, setData] = useState([
-    verbsByCommon.slice(0, 30),
-    verbsByCommon.slice(0, 60),
-    verbsByCommon.slice(0, 90),
-    verbsByCommon,
+    verbsByFrequency.slice(0, 30),
+    verbsByFrequency.slice(0, 60),
+    verbsByFrequency.slice(0, 90),
+    verbsByFrequency,
   ]);
   // correctionDisplay (0: start, 1: translation, 2: correction) = display of the correction
   const [correctionDisplay, setCorrectionDisplay] = useState(0);
@@ -31,8 +32,16 @@ function App() {
   const [dataLang] = useState(languages);
   // current language selected : object example { language: "english", alpha2: "GB" }
   const [currentLang, setCurrentLang] = useState(dataLang[0]);
-  // language popup interruptor : bool
+  // darkMode interruptor : bool (initialized with prefers-color-scheme)
+  const mq = window.matchMedia("(prefers-color-scheme: dark)");
+  const [whiteMode, setWhiteMode] = useState(mq.matches ? false : true);
+  // popup interruptors : bool
+  const [popupParent, setPopupParent] = useState(false);
   const [popupLang, setPopupLang] = useState(false);
+  const [popupMenu, setPopupMenu] = useState(false);
+  const [popupAbout, setPopupAbout] = useState(false);
+  const [popupContact, setPopupContact] = useState(false);
+  const [popupEntireList, setPopupEntireList] = useState(false);
 
   useEffect(() => {
     setCurrentList(data[dataIndex]);
@@ -44,24 +53,47 @@ function App() {
     setCurrentList(data[dataIndex]);
     setCorrectionDisplay(0);
     setData([
-      verbsByCommon.slice(0, 30),
-      verbsByCommon.slice(0, 60),
-      verbsByCommon.slice(0, 90),
-      verbsByCommon,
+      verbsByFrequency.slice(0, 30),
+      verbsByFrequency.slice(0, 60),
+      verbsByFrequency.slice(0, 90),
+      verbsByFrequency,
     ]);
   }
+
+  function shutDownAllPopup() {
+    setPopupParent(false);
+    setPopupAbout(false);
+    setPopupLang(false);
+    setPopupMenu(false);
+    setPopupContact(false);
+    setPopupEntireList(false);
+  }
+
+  useEffect(() => {
+    UpdateStyles(whiteMode);
+  }, [whiteMode]);
+
+  useEffect(() => {
+    if (
+      popupAbout ||
+      popupLang ||
+      popupMenu ||
+      popupContact ||
+      popupEntireList
+    ) {
+      setPopupParent(true);
+    }
+  }, [popupAbout, popupLang, popupMenu, popupContact, popupEntireList]);
 
   return (
     <>
       <div className="flex flex-col items-center">
         <Title
-          dataLang={dataLang}
           currentLang={currentLang}
-          setCurrentLang={setCurrentLang}
-          popupLang={popupLang}
           setPopupLang={setPopupLang}
+          setPopupMenu={setPopupMenu}
+          shutDownAllPopup={shutDownAllPopup}
         />
-
         <ListButton
           currentList={currentList}
           dataIndex={dataIndex}
@@ -86,14 +118,29 @@ function App() {
           selectedVerbIndex={selectedVerbIndex}
           correctionDisplay={correctionDisplay}
           currentVerb={currentVerb}
+          whiteMode={whiteMode}
         />
       </div>
-      <PopupLang
+      <PopupParent
         popupLang={popupLang}
         setPopupLang={setPopupLang}
         dataLang={dataLang}
         setCurrentLang={setCurrentLang}
         reset={reset}
+        whiteMode={whiteMode}
+        popupMenu={popupMenu}
+        setPopupMenu={setPopupMenu}
+        setWhiteMode={setWhiteMode}
+        setPopupAbout={setPopupAbout}
+        popupAbout={popupAbout}
+        popupContact={popupContact}
+        setPopupContact={setPopupContact}
+        popupEntireList={popupEntireList}
+        setPopupEntireList={setPopupEntireList}
+        popupParent={popupParent}
+        verbsByFrequency={verbsByFrequency}
+        currentLang={currentLang}
+        shutDownAllPopup={shutDownAllPopup}
       />
     </>
   );

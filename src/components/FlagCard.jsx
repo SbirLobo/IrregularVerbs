@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 
 export default function FlagCard({
   lang,
-  setPopupLang,
   setCurrentLang,
   reset,
+  shutDownAllPopup,
 }) {
   function test() {
     setCurrentLang(lang);
-    setPopupLang(false);
+    shutDownAllPopup();
     reset();
   }
 
@@ -16,7 +16,7 @@ export default function FlagCard({
     <>
       <img
         key={lang.id}
-        className="flag"
+        className="roundedIcon flagIcon"
         src={`/flags_svg_alpha2/${lang.alpha2}.svg`}
         alt={`${lang.language} flag`}
         onClick={test}
@@ -30,4 +30,5 @@ FlagCard.propTypes = {
   setPopupLang: PropTypes.func,
   setCurrentLang: PropTypes.func,
   reset: PropTypes.func,
+  shutDownAllPopup: PropTypes.func,
 };
