@@ -2,13 +2,13 @@ import PropTypes from "prop-types";
 
 export default function FlagCard({
   lang,
-  setPopupLang,
   setCurrentLang,
   reset,
+  shutDownAllPopup,
 }) {
   function test() {
     setCurrentLang(lang);
-    setPopupLang(false);
+    shutDownAllPopup();
     reset();
   }
 
@@ -30,4 +30,5 @@ FlagCard.propTypes = {
   setPopupLang: PropTypes.func,
   setCurrentLang: PropTypes.func,
   reset: PropTypes.func,
+  shutDownAllPopup: PropTypes.func,
 };

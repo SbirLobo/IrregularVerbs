@@ -6,14 +6,14 @@ export default function PopupMenuButtons({
   setPopupContact,
   setPopupEntireList,
 }) {
+  const menuButtons = ["All verbs", "About", "Contact"];
+
   function handleClickMenu(e) {
     setPopupMenu(false);
     e.target.innerHTML === menuButtons[0] && setPopupEntireList(true);
     e.target.innerHTML === menuButtons[1] && setPopupAbout(true);
     e.target.innerHTML === menuButtons[2] && setPopupContact(true);
   }
-
-  const menuButtons = ["All verbs", "About", "Contact"];
 
   return (
     <div className="popupMenuButtons">

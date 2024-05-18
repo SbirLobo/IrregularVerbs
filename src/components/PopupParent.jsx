@@ -6,9 +6,9 @@ import PopupContact from "./PopupContact";
 import PopupEntireList from "./PopupEntireList";
 
 export default function PopupParent({
+  dataLang,
   popupLang,
   setPopupLang,
-  dataLang,
   setCurrentLang,
   reset,
   whiteMode,
@@ -22,9 +22,9 @@ export default function PopupParent({
   popupEntireList,
   setPopupEntireList,
   popupParent,
-  setPopupParent,
   verbsByFrequency,
   currentLang,
+  shutDownAllPopup,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
@@ -35,14 +35,6 @@ export default function PopupParent({
     if (e.target === e.currentTarget) {
       shutDownAllPopup();
     }
-  }
-  function shutDownAllPopup() {
-    setPopupParent(false);
-    setPopupAbout(false);
-    setPopupLang(false);
-    setPopupMenu(false);
-    setPopupContact(false);
-    setPopupEntireList(false);
   }
 
   return (
@@ -62,6 +54,7 @@ export default function PopupParent({
               setCurrentLang={setCurrentLang}
               reset={reset}
               whiteMode={whiteMode}
+              shutDownAllPopup={shutDownAllPopup}
             />
           )}
           {popupMenu && (
@@ -106,7 +99,7 @@ PopupParent.propTypes = {
   popupEntireList: PropTypes.bool,
   setPopupEntireList: PropTypes.func,
   popupParent: PropTypes.bool,
-  setPopupParent: PropTypes.func,
   verbsByFrequency: PropTypes.arrayOf(PropTypes.object),
   currentLang: PropTypes.object,
+  shutDownAllPopup: PropTypes.func,
 };

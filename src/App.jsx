@@ -60,6 +60,15 @@ function App() {
     ]);
   }
 
+  function shutDownAllPopup() {
+    setPopupParent(false);
+    setPopupAbout(false);
+    setPopupLang(false);
+    setPopupMenu(false);
+    setPopupContact(false);
+    setPopupEntireList(false);
+  }
+
   useEffect(() => {
     UpdateStyles(whiteMode);
   }, [whiteMode]);
@@ -83,6 +92,7 @@ function App() {
           currentLang={currentLang}
           setPopupLang={setPopupLang}
           setPopupMenu={setPopupMenu}
+          shutDownAllPopup={shutDownAllPopup}
         />
         <ListButton
           currentList={currentList}
@@ -128,9 +138,9 @@ function App() {
         popupEntireList={popupEntireList}
         setPopupEntireList={setPopupEntireList}
         popupParent={popupParent}
-        setPopupParent={setPopupParent}
         verbsByFrequency={verbsByFrequency}
         currentLang={currentLang}
+        shutDownAllPopup={shutDownAllPopup}
       />
     </>
   );

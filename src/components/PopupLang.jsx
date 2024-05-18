@@ -7,6 +7,7 @@ export default function PopupLang({
   setCurrentLang,
   reset,
   whiteMode,
+  shutDownAllPopup,
 }) {
   return (
     <>
@@ -22,6 +23,7 @@ export default function PopupLang({
             setPopupLang={setPopupLang}
             setCurrentLang={setCurrentLang}
             reset={reset}
+            shutDownAllPopup={shutDownAllPopup}
           />
         ))}
       </div>
@@ -35,4 +37,5 @@ PopupLang.propTypes = {
   setCurrentLang: PropTypes.func,
   reset: PropTypes.func,
   whiteMode: PropTypes.bool,
+  shutDownAllPopup: PropTypes.func,
 };
