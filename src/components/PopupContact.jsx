@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import ContactForm from "./ContactForm";
 
 export default function PopupContact({ whiteMode }) {
   return (
@@ -8,7 +9,7 @@ export default function PopupContact({ whiteMode }) {
           whiteMode ? "bgPopupWhite" : "bgPopupDark"
         }`}
       >
-        <p>in development...</p>
+        <ContactForm />
       </div>
     </>
   );
