@@ -18,12 +18,14 @@ function App() {
     verbsByFrequency.slice(0, 90),
     verbsByFrequency,
   ]);
+  //
+  const [verbsByAlphabetic, setVerbsByAlphabetic] = useState([]);
   // correctionDisplay (0: start, 1: translation, 2: correction) = display of the correction
   const [correctionDisplay, setCorrectionDisplay] = useState(0);
   //selectedVerbIndex = index of the verb chosen by chance
   const [selectedVerbIndex, setSelectedVerbIndex] = useState(-1);
   // dataIndex = index of the data list
-  const [dataIndex, setDataIndex] = useState(0);
+  const [dataIndex, setDataIndex] = useState(3);
   // current data list of verbs : array
   const [currentList, setCurrentList] = useState(data[0]);
   // current verb : object
@@ -47,6 +49,19 @@ function App() {
     setCurrentList(data[dataIndex]);
     setCorrectionDisplay(0);
   }, [dataIndex, data]);
+
+  useEffect(() => {
+    const newVerbsByAlphabetic = [...verbsByFrequency].sort((a, b) => {
+      if (a.base_form < b.base_form) {
+        return -1;
+      }
+      if (a.base_form > b.base_form) {
+        return 1;
+      }
+      return 0;
+    });
+    setVerbsByAlphabetic(newVerbsByAlphabetic);
+  }, []);
 
   function reset() {
     setSelectedVerbIndex(-1);
@@ -93,6 +108,8 @@ function App() {
           setPopupLang={setPopupLang}
           setPopupMenu={setPopupMenu}
           shutDownAllPopup={shutDownAllPopup}
+          popupMenu={popupMenu}
+          popupLang={popupLang}
         />
         <ListButton
           currentList={currentList}
@@ -141,6 +158,7 @@ function App() {
         verbsByFrequency={verbsByFrequency}
         currentLang={currentLang}
         shutDownAllPopup={shutDownAllPopup}
+        verbsByAlphabetic={verbsByAlphabetic}
       />
     </>
   );

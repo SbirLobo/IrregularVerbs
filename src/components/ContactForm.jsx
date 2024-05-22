@@ -37,20 +37,32 @@ export default function ContactForm({ whiteMode }) {
         required
         type="text"
         name="user_name"
-        className="rounded-md py-1 px-2 text-[var(--text-white-theme)] root"
+        className={`rounded-md py-1 px-2 ${
+          whiteMode
+            ? "bg-[--bg-white-theme-mainButton]"
+            : "bg-[--bg-dark-theme-mainButton]"
+        }`}
       />
       <label className="text-left pt-3 pb-1">Email</label>
       <input
         required
         type="email"
         name="user_email"
-        className="rounded-md py-1 px-2 text-[var(--text-white-theme)]"
+        className={`rounded-md py-1 px-2 ${
+          whiteMode
+            ? "bg-[--bg-white-theme-mainButton]"
+            : "bg-[--bg-dark-theme-mainButton]"
+        }`}
       />
       <label className="text-left pt-3 pb-1">Message</label>
       <textarea
         required
         name="message"
-        className="rounded-md py-1 px-2 text-[var(--text-white-theme)] h-60"
+        className={`rounded-md py-1 px-2 h-60 ${
+          whiteMode
+            ? "bg-[--bg-white-theme-mainButton]"
+            : "bg-[--bg-dark-theme-mainButton]"
+        }`}
       />
       <input
         type="submit"

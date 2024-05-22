@@ -25,6 +25,7 @@ export default function PopupParent({
   verbsByFrequency,
   currentLang,
   shutDownAllPopup,
+  verbsByAlphabetic,
 }) {
   function handleKeyDown(e) {
     if (e.keyCode === 27) {
@@ -74,6 +75,7 @@ export default function PopupParent({
               whiteMode={whiteMode}
               verbsByFrequency={verbsByFrequency}
               currentLang={currentLang}
+              verbsByAlphabetic={verbsByAlphabetic}
             />
           )}
         </div>
@@ -102,4 +104,5 @@ PopupParent.propTypes = {
   verbsByFrequency: PropTypes.arrayOf(PropTypes.object),
   currentLang: PropTypes.object,
   shutDownAllPopup: PropTypes.func,
+  verbsByAlphabetic: PropTypes.arrayOf(PropTypes.object),
 };

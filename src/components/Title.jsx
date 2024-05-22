@@ -5,14 +5,16 @@ export default function Title({
   setPopupLang,
   setPopupMenu,
   shutDownAllPopup,
+  popupLang,
+  popupMenu,
 }) {
   function handleclickOpenPopupLang() {
     shutDownAllPopup();
-    setPopupLang(true);
+    setPopupLang(!popupLang);
   }
   function handleclickOpenPopupMenu() {
     shutDownAllPopup();
-    setPopupMenu(true);
+    setPopupMenu(!popupMenu);
   }
   return (
     <div className="flex flex-row justify-center items-center gap-6">
@@ -38,4 +40,7 @@ Title.propTypes = {
   setPopupLang: PropTypes.func,
   setPopupMenu: PropTypes.func,
   shutDownAllPopup: PropTypes.func,
+  setPopupParent: PropTypes.func,
+  popupLang: PropTypes.bool,
+  popupMenu: PropTypes.bool,
 };
