@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import AboutText from "./AboutText";
 
 export default function PopupAbout({ whiteMode }) {
   return (
@@ -8,7 +9,9 @@ export default function PopupAbout({ whiteMode }) {
           whiteMode ? "bgPopupWhite" : "bgPopupDark"
         }`}
       >
-        <p>in development...</p>
+        <div className="text-left text-xl p-4">
+          <AboutText />
+        </div>
       </div>
     </>
   );
