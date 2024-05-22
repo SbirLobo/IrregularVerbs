@@ -9,7 +9,7 @@ export default function PopupContact({ whiteMode }) {
           whiteMode ? "bgPopupWhite" : "bgPopupDark"
         }`}
       >
-        <ContactForm />
+        <ContactForm whiteMode={whiteMode} />
       </div>
     </>
   );

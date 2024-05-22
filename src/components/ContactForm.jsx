@@ -1,8 +1,11 @@
+import PropTypes from "prop-types";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import UpdateStyles from "./UpdateStyle";
 
-export default function ContactForm() {
+export default function ContactForm({ whiteMode }) {
   const form = useRef();
+  UpdateStyles(whiteMode);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -33,22 +36,34 @@ export default function ContactForm() {
         required
         type="text"
         name="user_name"
-        className="rounded-md py-1 px-2 root"
+        className="rounded-md py-1 px-2 text-[var(--text-white-theme)] root"
       />
       <label className="text-left pt-3 pb-1">Email</label>
       <input
         required
         type="email"
         name="user_email"
-        className="rounded-md py-1 px-2"
+        className="rounded-md py-1 px-2 text-[var(--text-white-theme)]"
       />
       <label className="text-left pt-3 pb-1">Message</label>
-      <textarea required name="message" className="rounded-md py-1 px-2 h-60" />
+      <textarea
+        required
+        name="message"
+        className="rounded-md py-1 px-2 text-[var(--text-white-theme)] h-60"
+      />
       <input
         type="submit"
         value="Send"
-        className="rounded-md py-1 px-2 cursor-pointer border-2 border-red-700 mt-4"
+        className={`mainButton text-center w-full rounded-md py-1 px-2 cursor-pointer border-2 ${
+          whiteMode
+            ? "bg-[--bg-white-theme-mainButton]"
+            : "bg-[--bg-dark-theme-mainButton]"
+        }`}
       />
     </form>
   );
 }
+
+ContactForm.propTypes = {
+  whiteMode: PropTypes.bool,
+};
