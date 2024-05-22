@@ -21,7 +21,8 @@ export default function ContactForm({ whiteMode }) {
       )
       .then(
         () => {
-          console.log("SUCCESS!");
+          alert("SUCCESS!");
+          form.current.reset();
         },
         (error) => {
           console.log("FAILED...", error.text);
