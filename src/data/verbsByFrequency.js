@@ -1,4 +1,4 @@
-const verbsByCommon = [
+const verbsByFrequency = [
   {
     id: "1",
     base_form: "to be",
@@ -2221,4 +2221,4 @@ const verbsByCommon = [
   },
 ];
 
-export default verbsByCommon;
+export default verbsByFrequency;
