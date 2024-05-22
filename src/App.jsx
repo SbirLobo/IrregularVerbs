@@ -82,8 +82,13 @@ function App() {
       popupEntireList
     ) {
       setPopupParent(true);
+      console.log("pass");
     }
   }, [popupAbout, popupLang, popupMenu, popupContact, popupEntireList]);
+
+  console.log(popupMenu);
+  console.log(popupLang);
+  console.log(popupParent);
 
   return (
     <>
@@ -93,6 +98,8 @@ function App() {
           setPopupLang={setPopupLang}
           setPopupMenu={setPopupMenu}
           shutDownAllPopup={shutDownAllPopup}
+          popupMenu={popupMenu}
+          popupLang={popupLang}
         />
         <ListButton
           currentList={currentList}
