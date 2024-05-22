@@ -97,7 +97,6 @@ function App() {
       popupEntireList
     ) {
       setPopupParent(true);
-      console.log("pass");
     }
   }, [popupAbout, popupLang, popupMenu, popupContact, popupEntireList]);
 
